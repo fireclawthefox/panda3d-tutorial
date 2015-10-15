@@ -35,7 +35,7 @@ from player import Player
 #
 # set the application Name
 __builtin__.appName = "Game Name"
-__builtin__.versionstring = "15.07"
+__builtin__.versionstring = "15.10"
 home = os.path.expanduser("~")
 __builtin__.basedir = os.path.join(home, __builtin__.appName)
 if not os.path.exists(__builtin__.basedir):
@@ -153,7 +153,7 @@ class Main(ShowBase, FSM):
 
     def enterGame(self):
         # main game code should be called here
-        self.player.start((0, 20, 0))
+        self.player.start((0, 8, -0.5))
 
     def exitGame(self):
         # cleanup for game code

@@ -15,19 +15,21 @@ class Player(FSM):
         FSM.__init__(self, "FSM-Player%d"%charNr)
         charPath = "characters/character%d/" % charNr
         self.character = Actor(
-            charPath + "char"#, {
-                #"Idle":charPath + "idle",
-                #"walk":charPath + "walk",
-                #"punch_l":charPath + "punch_l",
-                #"punch_r":charPath + "punch_r",
-                #"kick_l":charPath + "kick_l",
-                #"kick_r":charPath + "kick_r",
-                #"defend":charPath + "defend"
-            #}
+            charPath + "char", {
+                "Idle":charPath + "idle",
+                "Walk":charPath + "walk",
+                "Punch_l":charPath + "punch_l",
+                "Punch_r":charPath + "punch_r",
+                "Kick_l":charPath + "kick_l",
+                "Kick_r":charPath + "kick_r",
+                "Defend":charPath + "defend",
+                #"Defeated":charPath + "defeated"
+            }
         )
+        self.character.setH(90)
         self.character.reparentTo(render)
         self.character.hide()
-        self.walkSpeed = 5.0 # units per second
+        self.walkSpeed = 2.0 # units per second
         self.leftButton = KeyboardButton.asciiKey('a')
         self.rightButton = KeyboardButton.asciiKey('d')
 
@@ -41,12 +43,23 @@ class Player(FSM):
         speed = 0.0
         isDown = base.mouseWatcherNode.isButtonDown
         if isDown(self.leftButton):
-            speed -= self.walkSpeed
-        if isDown(self.rightButton):
             speed += self.walkSpeed
-        xDelta = speed * globalClock.getDt()
-        self.character.setX(self.character, xDelta)
+        if isDown(self.rightButton):
+            speed -= self.walkSpeed
+        yDelta = speed * globalClock.getDt()
+        self.character.setY(self.character, yDelta)
+        if speed != 0.0 and self.state != "Walk":
+            self.request("Walk")
+        elif speed == 0.0 and self.state != "Idle":
+            self.request("Idle")
         return task.cont
 
     def enterIdle(self):
         self.character.loop("Idle")
+    def exitIdle(self):
+        self.character.stop()
+
+    def enterWalk(self):
+        self.character.loop("Walk")
+    def exitWalk(self):
+        self.character.stop()
