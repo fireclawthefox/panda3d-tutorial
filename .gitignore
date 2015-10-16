@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Translations
+*.mo
+
+# Rope
+.ropeproject
