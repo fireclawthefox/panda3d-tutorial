@@ -134,7 +134,8 @@ class Main(ShowBase, FSM):
         #
         # initialize game content
         #
-        self.player = Player(1)
+        self.player = Player(1, "p1")
+        self.player2 = Player(1, "p2")
 
         #
         # Event handling
@@ -153,7 +154,8 @@ class Main(ShowBase, FSM):
 
     def enterGame(self):
         # main game code should be called here
-        self.player.start((0, 8, -0.5))
+        self.player.start((-1, 8, -0.5))
+        self.player2.start((1, 8, -0.5))
 
     def exitGame(self):
         # cleanup for game code
