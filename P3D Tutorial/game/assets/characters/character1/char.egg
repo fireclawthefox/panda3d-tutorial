@@ -3,6 +3,13 @@
 <Comment> {
   "egg-trans -tbnall -o '/home/linux/Dokumente/Privat/Projects/Git_projects/panda3d-tutorial/P3D Tutorial/design/Character1/Character1.egg' '/home/linux/Dokumente/Privat/Projects/Git_projects/panda3d-tutorial/P3D Tutorial/design/Character1/Character1.egg'"
 }
+<Texture> Character_nm {
+  Character_nm.png
+  <Scalar> wrap { repeat }
+  <Scalar> minfilter { linear_mipmap_linear }
+  <Scalar> magfilter { linear_mipmap_linear }
+  <Scalar> envtype { normal }
+}
 <Texture> Character_col {
   Character.png
   <Scalar> wrap { repeat }
@@ -8029,6 +8036,7 @@
       <Normal> { 0.02398 0.946631 0.321426 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 495 411 412 464 <Ref> { Character } }
     }
@@ -8036,6 +8044,7 @@
       <Normal> { 0.560643 0.332837 -0.758221 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 596 614 613 606 <Ref> { Character } }
     }
@@ -8043,6 +8052,7 @@
       <Normal> { 0.165056 -0.983777 -0.070277 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 474 385 388 471 <Ref> { Character } }
     }
@@ -8050,6 +8060,7 @@
       <Normal> { 0.803801 -0.40197 0.438547 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 494 451 441 459 <Ref> { Character } }
     }
@@ -8057,6 +8068,7 @@
       <Normal> { 0.380469 0.58644 0.715074 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 592 495 464 575 <Ref> { Character } }
     }
@@ -8064,6 +8076,7 @@
       <Normal> { 0.648649 -0.757268 -0.076162 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 537 474 471 523 <Ref> { Character } }
     }
@@ -8071,6 +8084,7 @@
       <Normal> { 0.388293 -0.212669 0.896661 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 574 494 459 573 <Ref> { Character } }
     }
@@ -8078,6 +8092,7 @@
       <Normal> { -0.202536 0.931969 -0.300689 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 496 406 417 497 <Ref> { Character } }
     }
@@ -8085,6 +8100,7 @@
       <Normal> { 0.843044 0.222009 -0.489886 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 556 596 606 555 <Ref> { Character } }
     }
@@ -8092,6 +8108,7 @@
       <Normal> { 0.14945 -0.988769 0 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 492 377 376 491 <Ref> { Character } }
     }
@@ -8099,6 +8116,7 @@
       <Normal> { 0.339827 0.887312 -0.31176 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 569 496 497 611 <Ref> { Character } }
     }
@@ -8106,6 +8124,7 @@
       <Normal> { 0.523578 -0.851847 -0.014958 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 591 492 491 606 <Ref> { Character } }
     }
@@ -8113,6 +8132,7 @@
       <Normal> { 0.100904 -0.938897 -0.329076 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 491 376 386 493 <Ref> { Character } }
     }
@@ -8120,6 +8140,7 @@
       <Normal> { 0.574965 -0.755539 -0.313967 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 606 491 493 555 <Ref> { Character } }
     }
@@ -8127,6 +8148,7 @@
       <Normal> { -0.219113 0.96656 -0.133234 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 475 397 406 496 <Ref> { Character } }
     }
@@ -8134,6 +8156,7 @@
       <Normal> { 0.993689 -0.060665 -0.094347 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 543 556 555 537 <Ref> { Character } }
     }
@@ -8141,6 +8164,7 @@
       <Normal> { 0.420019 0.882405 -0.212004 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 539 475 496 569 <Ref> { Character } }
     }
@@ -8148,6 +8172,7 @@
       <Normal> { 0.89089 0.387625 -0.236772 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 431 437 465 450 <Ref> { Character } }
     }
@@ -8155,6 +8180,7 @@
       <Normal> { 0.217124 0.931589 0.291545 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 412 403 432 464 <Ref> { Character } }
     }
@@ -8162,6 +8188,7 @@
       <Normal> { 0.320662 -0.920354 0.223882 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 459 441 392 390 <Ref> { Character } }
     }
@@ -8169,6 +8196,7 @@
       <Normal> { 0.318123 -0.040826 -0.94717 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 614 626 623 613 <Ref> { Character } }
     }
@@ -8176,6 +8204,7 @@
       <Normal> { -0.04165 0.32158 0.945966 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 574 621 620 575 <Ref> { Character } }
     }
@@ -8183,6 +8212,7 @@
       <Normal> { -0.002287 -0.695058 0.71895 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 591 617 619 573 <Ref> { Character } }
     }
@@ -8190,6 +8220,7 @@
       <Normal> { 0.092473 0.995555 -0.017885 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 592 618 616 611 <Ref> { Character } }
     }
@@ -8197,6 +8228,7 @@
       <Normal> { -0.044419 -0.453593 -0.890101 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 624 634 640 622 <Ref> { Character } }
     }
@@ -8204,6 +8236,7 @@
       <Normal> { 0.361606 0.488451 0.794139 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 621 645 639 620 <Ref> { Character } }
     }
@@ -8211,6 +8244,7 @@
       <Normal> { 0.39773 -0.873442 0.28091 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 617 631 637 619 <Ref> { Character } }
     }
@@ -8218,6 +8252,7 @@
       <Normal> { 0.454958 0.872476 -0.17832 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 618 633 629 616 <Ref> { Character } }
     }
@@ -8225,6 +8260,7 @@
       <Normal> { -0.563314 0.82473 0.049973 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 563 567 519 521 <Ref> { Character } }
     }
@@ -8232,6 +8268,7 @@
       <Normal> { 0.980997 -0.039341 0.189992 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 586 579 601 604 <Ref> { Character } }
     }
@@ -8239,6 +8276,7 @@
       <Normal> { -0.247414 -0.356735 0.900848 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 510 511 554 561 <Ref> { Character } }
     }
@@ -8246,6 +8284,7 @@
       <Normal> { 0.40472 -0.289394 0.867441 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 561 554 579 586 <Ref> { Character } }
     }
@@ -8253,6 +8292,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 564 559 503 501 <Ref> { Character } }
     }
@@ -8260,6 +8300,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 603 600 559 564 <Ref> { Character } }
     }
@@ -8267,6 +8308,7 @@
       <Normal> { 0.237886 -0.19177 0.952174 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 554 551 578 579 <Ref> { Character } }
     }
@@ -8274,6 +8316,7 @@
       <Normal> { -0.318414 -0.19196 0.928312 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 511 517 551 554 <Ref> { Character } }
     }
@@ -8281,6 +8324,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 565 512 518 566 <Ref> { Character } }
     }
@@ -8288,6 +8332,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 594 565 566 583 <Ref> { Character } }
     }
@@ -8295,6 +8340,7 @@
       <Normal> { -0.995664 0.091943 0.014155 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 507 513 502 510 <Ref> { Character } }
     }
@@ -8302,6 +8348,7 @@
       <Normal> { -0.996964 -0.017712 0.075822 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 502 504 511 510 <Ref> { Character } }
     }
@@ -8309,6 +8356,7 @@
       <Normal> { 0.700343 0.704677 0.113799 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 577 584 567 563 <Ref> { Character } }
     }
@@ -8316,6 +8364,7 @@
       <Normal> { 0.923618 0.350814 0.154463 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 581 595 584 577 <Ref> { Character } }
     }
@@ -8323,6 +8372,7 @@
       <Normal> { 0.011249 -0.447911 -0.894007 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 634 650 651 640 <Ref> { Character } }
     }
@@ -8330,6 +8380,7 @@
       <Normal> { -0.073347 0.428906 0.900366 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 644 648 647 638 <Ref> { Character } }
     }
@@ -8337,6 +8388,7 @@
       <Normal> { -0.150362 -0.840591 0.520383 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 630 642 646 636 <Ref> { Character } }
     }
@@ -8344,6 +8396,7 @@
       <Normal> { -0.084807 0.920663 -0.381034 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 632 643 641 628 <Ref> { Character } }
     }
@@ -8351,6 +8404,7 @@
       <Normal> { 0.101951 -0.383074 -0.918074 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 650 660 658 651 <Ref> { Character } }
     }
@@ -8358,6 +8412,7 @@
       <Normal> { 0.049461 0.387791 0.920419 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 648 656 657 647 <Ref> { Character } }
     }
@@ -8365,6 +8420,7 @@
       <Normal> { 0.015128 -0.913873 0.405718 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 642 653 655 646 <Ref> { Character } }
     }
@@ -8372,6 +8428,7 @@
       <Normal> { -0.0227 0.754761 -0.655607 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 643 654 652 641 <Ref> { Character } }
     }
@@ -8379,6 +8436,7 @@
       <Normal> { -0.03183 -0.420485 -0.906741 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 660 674 672 658 <Ref> { Character } }
     }
@@ -8386,6 +8444,7 @@
       <Normal> { 0.263127 0.346355 0.900446 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 656 665 666 657 <Ref> { Character } }
     }
@@ -8393,6 +8452,7 @@
       <Normal> { 0.20387 -0.894377 0.398154 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 653 662 664 655 <Ref> { Character } }
     }
@@ -8400,6 +8460,7 @@
       <Normal> { 0.118872 0.759016 -0.640129 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 654 663 661 652 <Ref> { Character } }
     }
@@ -8407,6 +8468,7 @@
       <Normal> { -0.136903 0.365114 0.920842 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 665 668 669 666 <Ref> { Character } }
     }
@@ -8414,6 +8476,7 @@
       <Normal> { -0.171702 -0.821296 0.54405 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 662 670 667 664 <Ref> { Character } }
     }
@@ -8421,6 +8484,7 @@
       <Normal> { -0.031678 0.735251 -0.677055 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 663 671 675 661 <Ref> { Character } }
     }
@@ -8428,6 +8492,7 @@
       <Normal> { -0.019125 0.821656 -0.569663 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 723 739 738 719 <Ref> { Character } }
     }
@@ -8435,6 +8500,7 @@
       <Normal> { 0.849617 0.514412 0.116321 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 722 708 711 728 <Ref> { Character } }
     }
@@ -8442,6 +8508,7 @@
       <Normal> { 0.835627 -0.504445 0.217398 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 724 709 707 720 <Ref> { Character } }
     }
@@ -8449,6 +8516,7 @@
       <Normal> { 0.695477 -0.096128 0.712089 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 726 710 709 724 <Ref> { Character } }
     }
@@ -8456,6 +8524,7 @@
       <Normal> { -0.111261 0.993008 0.039447 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 497 417 411 495 <Ref> { Character } }
     }
@@ -8463,6 +8532,7 @@
       <Normal> { 0.205182 0.977697 0.044816 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 611 497 495 592 <Ref> { Character } }
     }
@@ -8470,6 +8540,7 @@
       <Normal> { 0.15196 -0.50132 0.851814 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 459 390 377 492 <Ref> { Character } }
     }
@@ -8477,6 +8548,7 @@
       <Normal> { 0.435525 -0.359061 0.825465 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 573 459 492 591 <Ref> { Character } }
     }
@@ -8484,6 +8556,7 @@
       <Normal> { 0.208721 -0.968205 -0.137891 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 606 613 617 591 <Ref> { Character } }
     }
@@ -8491,6 +8564,7 @@
       <Normal> { -0.093645 0.824876 0.557504 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 575 620 618 592 <Ref> { Character } }
     }
@@ -8498,6 +8572,7 @@
       <Normal> { 0.367175 -0.896983 -0.246179 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 613 623 631 617 <Ref> { Character } }
     }
@@ -8505,6 +8580,7 @@
       <Normal> { 0.353588 0.925835 0.133437 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 620 639 633 618 <Ref> { Character } }
     }
@@ -8512,6 +8588,7 @@
       <Normal> { -0.093823 -0.921835 -0.376055 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 622 640 642 630 <Ref> { Character } }
     }
@@ -8519,6 +8596,7 @@
       <Normal> { -0.177913 0.900108 0.397684 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 638 647 643 632 <Ref> { Character } }
     }
@@ -8526,6 +8604,7 @@
       <Normal> { -0.022701 -0.754759 -0.655609 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 640 651 653 642 <Ref> { Character } }
     }
@@ -8533,6 +8612,7 @@
       <Normal> { 0.009541 0.966689 0.255777 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 647 657 654 643 <Ref> { Character } }
     }
@@ -8540,6 +8620,7 @@
       <Normal> { 0.096259 -0.786505 -0.610037 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 651 658 662 653 <Ref> { Character } }
     }
@@ -8547,6 +8628,7 @@
       <Normal> { 0.200573 0.947899 0.247503 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 657 666 663 654 <Ref> { Character } }
     }
@@ -8554,6 +8636,7 @@
       <Normal> { -0.063187 -0.69539 -0.715849 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 658 672 670 662 <Ref> { Character } }
     }
@@ -8561,6 +8644,7 @@
       <Normal> { -0.119016 0.941152 0.316336 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 666 669 671 663 <Ref> { Character } }
     }
@@ -8568,6 +8652,7 @@
       <Normal> { -0.101041 -0.861126 -0.49825 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 713 735 730 721 <Ref> { Character } }
     }
@@ -8575,6 +8660,7 @@
       <Normal> { 0.694285 0.102032 -0.712431 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 716 705 706 718 <Ref> { Character } }
     }
@@ -8582,6 +8668,7 @@
       <Normal> { 0.834254 0.394656 -0.385056 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 718 706 708 722 <Ref> { Character } }
     }
@@ -8589,6 +8676,7 @@
       <Normal> { -0.314779 0.072782 -0.946371 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 585 612 558 560 <Ref> { Character } }
     }
@@ -8596,6 +8684,7 @@
       <Normal> { 0.474024 -0.316657 -0.821602 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 611 616 615 597 <Ref> { Character } }
     }
@@ -8603,6 +8692,7 @@
       <Normal> { 0.788823 0.302165 0.535214 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 464 432 451 494 <Ref> { Character } }
     }
@@ -8610,6 +8700,7 @@
       <Normal> { 0.349196 0.16105 0.923106 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 575 464 494 574 <Ref> { Character } }
     }
@@ -8617,6 +8708,7 @@
       <Normal> { 0.872098 -0.285023 -0.397752 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 569 611 597 557 <Ref> { Character } }
     }
@@ -8624,6 +8716,7 @@
       <Normal> { 0.991228 -0.063827 -0.115726 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 539 569 557 544 <Ref> { Character } }
     }
@@ -8631,6 +8724,7 @@
       <Normal> { 0.794112 -0.14135 -0.591107 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 548 572 549 529 <Ref> { Character } }
     }
@@ -8638,6 +8732,7 @@
       <Normal> { 0.838451 -0.241118 -0.488735 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 450 465 439 440 <Ref> { Character } }
     }
@@ -8645,6 +8740,7 @@
       <Normal> { 0.394557 -0.032726 -0.918288 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 616 629 627 615 <Ref> { Character } }
     }
@@ -8652,6 +8748,7 @@
       <Normal> { -0.041652 -0.321584 0.945965 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 573 619 621 574 <Ref> { Character } }
     }
@@ -8659,6 +8756,7 @@
       <Normal> { -0.039515 0.452877 -0.890697 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 628 641 635 625 <Ref> { Character } }
     }
@@ -8666,6 +8764,7 @@
       <Normal> { 0.35262 -0.48756 0.798714 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 619 637 645 621 <Ref> { Character } }
     }
@@ -8673,6 +8772,7 @@
       <Normal> { 0.375576 0.850992 -0.367089 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 463 467 550 531 <Ref> { Character } }
     }
@@ -8680,6 +8780,7 @@
       <Normal> { -0.648806 -0.400336 -0.647134 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 580 610 612 585 <Ref> { Character } }
     }
@@ -8687,6 +8788,7 @@
       <Normal> { 0.649716 -0.672386 -0.354635 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 505 498 508 520 <Ref> { Character } }
     }
@@ -8694,6 +8796,7 @@
       <Normal> { 0.240702 0.261844 -0.934612 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 560 558 500 509 <Ref> { Character } }
     }
@@ -8701,6 +8804,7 @@
       <Normal> { 0.176671 -0.784405 -0.594556 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 461 466 370 382 <Ref> { Character } }
     }
@@ -8708,6 +8812,7 @@
       <Normal> { -0.010863 0.939781 -0.341603 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 423 427 467 463 <Ref> { Character } }
     }
@@ -8715,6 +8820,7 @@
       <Normal> { 0.485736 -0.826747 -0.283811 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 520 508 571 562 <Ref> { Character } }
     }
@@ -8722,6 +8828,7 @@
       <Normal> { -0.655373 -0.39255 -0.645283 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 576 605 610 580 <Ref> { Character } }
     }
@@ -8729,6 +8836,7 @@
       <Normal> { -0.569758 -0.569899 -0.592107 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 562 571 605 576 <Ref> { Character } }
     }
@@ -8736,6 +8844,7 @@
       <Normal> { 0.597726 -0.610308 -0.519854 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 529 549 466 461 <Ref> { Character } }
     }
@@ -8743,6 +8852,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 564 501 512 565 <Ref> { Character } }
     }
@@ -8750,6 +8860,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 603 564 565 594 <Ref> { Character } }
     }
@@ -8757,6 +8868,7 @@
       <Normal> { -0.90834 0.417253 0.028594 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 521 519 513 507 <Ref> { Character } }
     }
@@ -8764,6 +8876,7 @@
       <Normal> { 0.973911 0.183733 0.133189 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 586 604 595 581 <Ref> { Character } }
     }
@@ -8771,6 +8884,7 @@
       <Normal> { 0.01125 0.447912 -0.894007 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 641 652 649 635 <Ref> { Character } }
     }
@@ -8778,6 +8892,7 @@
       <Normal> { -0.063415 -0.433234 0.899048 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 636 646 648 644 <Ref> { Character } }
     }
@@ -8785,6 +8900,7 @@
       <Normal> { 0.112371 0.395783 -0.911443 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 652 661 659 649 <Ref> { Character } }
     }
@@ -8792,6 +8908,7 @@
       <Normal> { 0.049458 -0.387797 0.920417 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 646 655 656 648 <Ref> { Character } }
     }
@@ -8799,6 +8916,7 @@
       <Normal> { -0.036105 0.435365 -0.89953 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 661 675 673 659 <Ref> { Character } }
     }
@@ -8806,6 +8924,7 @@
       <Normal> { 0.257393 -0.346919 0.901885 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 655 664 665 656 <Ref> { Character } }
     }
@@ -8813,6 +8932,7 @@
       <Normal> { 0.841036 -0.385862 -0.379169 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 720 707 703 712 <Ref> { Character } }
     }
@@ -8820,6 +8940,7 @@
       <Normal> { -0.128999 -0.36551 0.921825 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 664 667 668 665 <Ref> { Character } }
     }
@@ -8827,6 +8948,7 @@
       <Normal> { 0.018501 0.115755 0.993105 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 727 732 734 729 <Ref> { Character } }
     }
@@ -8834,6 +8956,7 @@
       <Normal> { 0.703314 0.095078 0.704492 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 728 711 710 726 <Ref> { Character } }
     }
@@ -8841,6 +8964,7 @@
       <Normal> { -0.208925 -0.057716 -0.976227 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 717 740 736 714 <Ref> { Character } }
     }
@@ -8848,6 +8972,7 @@
       <Normal> { 0.938543 -0.033339 -0.343548 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 509 500 499 506 <Ref> { Character } }
     }
@@ -8855,6 +8980,7 @@
       <Normal> { 0.791299 0.201168 -0.577389 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 531 550 572 548 <Ref> { Character } }
     }
@@ -8862,6 +8988,7 @@
       <Normal> { -0.04286 -0.996789 0.067634 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 517 515 553 551 <Ref> { Character } }
     }
@@ -8869,6 +8996,7 @@
       <Normal> { 0.329604 -0.939065 0.09756 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 551 553 588 578 <Ref> { Character } }
     }
@@ -8876,6 +9004,7 @@
       <Normal> { -0.0001 0.015869 -0.999874 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 559 552 514 503 <Ref> { Character } }
     }
@@ -8883,6 +9012,7 @@
       <Normal> { -0.004736 0.015735 -0.999865 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 600 587 552 559 <Ref> { Character } }
     }
@@ -8890,6 +9020,7 @@
       <Normal> { 0.976663 -0.107848 0.185736 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 579 578 589 601 <Ref> { Character } }
     }
@@ -8897,6 +9028,7 @@
       <Normal> { -0.98604 -0.112321 0.12292 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 504 516 517 511 <Ref> { Character } }
     }
@@ -8904,6 +9036,7 @@
       <Normal> { 0.165358 -0.986231 -0.002094 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 493 386 385 474 <Ref> { Character } }
     }
@@ -8911,6 +9044,7 @@
       <Normal> { 0.642777 -0.762422 -0.074494 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 555 493 474 537 <Ref> { Character } }
     }
@@ -8918,6 +9052,7 @@
       <Normal> { -0.109894 0.965708 0.235226 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 473 415 397 475 <Ref> { Character } }
     }
@@ -8925,6 +9060,7 @@
       <Normal> { 0.981815 -0.182594 -0.051945 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 541 543 537 523 <Ref> { Character } }
     }
@@ -8932,6 +9068,7 @@
       <Normal> { 0.417165 0.905874 0.073248 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 525 473 475 539 <Ref> { Character } }
     }
@@ -8939,6 +9076,7 @@
       <Normal> { 0.99058 0.121723 -0.062726 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 525 539 544 542 <Ref> { Character } }
     }
@@ -8946,6 +9084,7 @@
       <Normal> { 0.914235 0.358887 -0.18808 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 437 485 465 <Ref> { Character } }
     }
@@ -8953,6 +9092,7 @@
       <Normal> { 0.863449 -0.23262 -0.447598 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 465 485 454 439 <Ref> { Character } }
     }
@@ -8960,6 +9100,7 @@
       <Normal> { 0.287559 0.957564 -0.019518 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 404 401 437 431 <Ref> { Character } }
     }
@@ -8967,6 +9108,7 @@
       <Normal> { 0.283155 -0.226932 -0.93184 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 391 440 439 430 <Ref> { Character } }
     }
@@ -8974,6 +9116,7 @@
       <Normal> { 0.679025 -0.731903 0.056945 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 372 429 374 <Ref> { Character } }
     }
@@ -8981,6 +9124,7 @@
       <Normal> { 0.011015 0.839757 -0.54285 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 739 760 759 738 <Ref> { Character } }
     }
@@ -8988,6 +9132,7 @@
       <Normal> { 0.786418 -0.36958 -0.494932 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 763 752 746 755 <Ref> { Character } }
     }
@@ -8995,6 +9140,7 @@
       <Normal> { 0.021069 0.05796 0.998097 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 732 756 758 734 <Ref> { Character } }
     }
@@ -9002,6 +9148,7 @@
       <Normal> { 0.021237 0.019506 -0.999584 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 740 761 754 736 <Ref> { Character } }
     }
@@ -9009,6 +9156,7 @@
       <Normal> { -0.075619 0.140493 -0.98719 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 719 738 740 717 <Ref> { Character } }
     }
@@ -9016,6 +9164,7 @@
       <Normal> { 0.01851 -0.115771 0.993104 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 725 733 732 727 <Ref> { Character } }
     }
@@ -9023,6 +9172,7 @@
       <Normal> { -0.008054 -0.891406 0.453133 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 721 730 733 725 <Ref> { Character } }
     }
@@ -9030,6 +9180,7 @@
       <Normal> { -0.004485 0.957171 0.289489 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 729 734 739 723 <Ref> { Character } }
     }
@@ -9037,6 +9188,7 @@
       <Normal> { 0.017204 0.84609 -0.532762 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 760 776 781 759 <Ref> { Character } }
     }
@@ -9044,6 +9196,7 @@
       <Normal> { 0.038997 -0.881645 -0.470299 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 753 779 775 762 <Ref> { Character } }
     }
@@ -9051,6 +9204,7 @@
       <Normal> { 0.092606 0.01642 0.995567 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 756 774 778 758 <Ref> { Character } }
     }
@@ -9058,6 +9212,7 @@
       <Normal> { 0.116546 -0.000939 -0.993185 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 761 782 780 754 <Ref> { Character } }
     }
@@ -9065,6 +9220,7 @@
       <Normal> { 0.020103 0.141464 -0.989739 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 738 759 761 740 <Ref> { Character } }
     }
@@ -9072,6 +9228,7 @@
       <Normal> { 0.02107 -0.057976 0.998096 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 733 757 756 732 <Ref> { Character } }
     }
@@ -9079,6 +9236,7 @@
       <Normal> { 0.011718 -0.451659 0.892114 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 733 743 745 757 <Ref> { Character } }
     }
@@ -9086,6 +9244,7 @@
       <Normal> { -0.002855 0.955035 0.296479 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 734 758 760 739 <Ref> { Character } }
     }
@@ -9093,6 +9252,7 @@
       <Normal> { -0.01704 0.820046 -0.572043 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 776 785 783 781 <Ref> { Character } }
     }
@@ -9100,6 +9260,7 @@
       <Normal> { -0.015721 -0.820001 -0.572146 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 779 788 793 775 <Ref> { Character } }
     }
@@ -9107,6 +9268,7 @@
       <Normal> { 0.125461 0.029894 0.991648 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 774 797 787 778 <Ref> { Character } }
     }
@@ -9114,6 +9276,7 @@
       <Normal> { -0.002807 -0.001983 -0.999994 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 782 791 789 780 <Ref> { Character } }
     }
@@ -9121,6 +9284,7 @@
       <Normal> { 0.070763 0.072245 -0.994873 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 759 781 782 761 <Ref> { Character } }
     }
@@ -9128,6 +9292,7 @@
       <Normal> { 0.092606 -0.016438 0.995567 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 757 777 774 756 <Ref> { Character } }
     }
@@ -9135,6 +9300,7 @@
       <Normal> { 0.015143 -0.846833 0.531643 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 762 775 777 757 <Ref> { Character } }
     }
@@ -9142,6 +9308,7 @@
       <Normal> { 0.009653 0.93679 0.349759 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 758 778 776 760 <Ref> { Character } }
     }
@@ -9149,6 +9316,7 @@
       <Normal> { 0.994138 -0.018621 -0.106504 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 795 797 796 794 <Ref> { Character } }
     }
@@ -9156,6 +9324,7 @@
       <Normal> { 0.975302 -0.032746 -0.218434 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 792 795 794 790 <Ref> { Character } }
     }
@@ -9163,6 +9332,7 @@
       <Normal> { 0.984612 0.152113 -0.086028 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 786 787 797 795 <Ref> { Character } }
     }
@@ -9170,6 +9340,7 @@
       <Normal> { 0.951574 0.157637 -0.263927 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 784 786 795 792 <Ref> { Character } }
     }
@@ -9177,6 +9348,7 @@
       <Normal> { -0.002921 0.00177 -0.999994 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 781 783 791 782 <Ref> { Character } }
     }
@@ -9184,6 +9356,7 @@
       <Normal> { 0.12102 -0.020046 0.992448 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 777 796 797 774 <Ref> { Character } }
     }
@@ -9191,6 +9364,7 @@
       <Normal> { 0.058219 -0.750812 0.657945 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 775 793 796 777 <Ref> { Character } }
     }
@@ -9198,6 +9372,7 @@
       <Normal> { 0.044157 0.88561 0.462326 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 778 787 785 776 <Ref> { Character } }
     }
@@ -9205,6 +9380,7 @@
       <Normal> { 0.660659 0.739069 -0.131557 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 752 767 765 746 <Ref> { Character } }
     }
@@ -9212,6 +9388,7 @@
       <Normal> { 0.171111 -0.546334 0.819903 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 743 750 764 745 <Ref> { Character } }
     }
@@ -9219,6 +9396,7 @@
       <Normal> { 0.610339 -0.732163 0.302363 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 757 745 751 762 <Ref> { Character } }
     }
@@ -9226,6 +9404,7 @@
       <Normal> { 0.036002 0.400741 -0.915484 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 755 746 744 737 <Ref> { Character } }
     }
@@ -9233,6 +9412,7 @@
       <Normal> { -0.642558 -0.511682 -0.570352 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 737 744 742 731 <Ref> { Character } }
     }
@@ -9240,6 +9420,7 @@
       <Normal> { -0.596847 -0.731928 0.328717 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 730 741 743 733 <Ref> { Character } }
     }
@@ -9247,6 +9428,7 @@
       <Normal> { 0.505344 0.86153 0.048926 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 767 773 771 765 <Ref> { Character } }
     }
@@ -9254,6 +9436,7 @@
       <Normal> { 0.286013 -0.513149 0.809243 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 750 770 772 764 <Ref> { Character } }
     }
@@ -9261,6 +9444,7 @@
       <Normal> { 0.821803 0.343841 0.454328 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 745 764 766 751 <Ref> { Character } }
     }
@@ -9268,6 +9452,7 @@
       <Normal> { -0.008085 0.472596 -0.881242 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 746 765 749 744 <Ref> { Character } }
     }
@@ -9275,6 +9460,7 @@
       <Normal> { -0.602632 -0.431334 -0.671406 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 744 749 748 742 <Ref> { Character } }
     }
@@ -9282,6 +9468,7 @@
       <Normal> { -0.558038 -0.820195 0.125992 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 741 747 750 743 <Ref> { Character } }
     }
@@ -9289,6 +9476,7 @@
       <Normal> { 0.862725 -0.36668 -0.348213 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 769 771 773 768 <Ref> { Character } }
     }
@@ -9296,6 +9484,7 @@
       <Normal> { 0.866293 -0.378439 -0.326069 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 768 773 772 770 <Ref> { Character } }
     }
@@ -9303,6 +9492,7 @@
       <Normal> { 0.567605 0.46885 0.67676 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 764 772 773 766 <Ref> { Character } }
     }
@@ -9310,6 +9500,7 @@
       <Normal> { 0.075764 0.363993 -0.928315 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 765 771 769 749 <Ref> { Character } }
     }
@@ -9317,6 +9508,7 @@
       <Normal> { -0.186573 -0.657376 -0.730101 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 749 769 768 748 <Ref> { Character } }
     }
@@ -9324,6 +9516,7 @@
       <Normal> { -0.128468 -0.980534 -0.148488 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 747 768 770 750 <Ref> { Character } }
     }
@@ -9331,6 +9524,7 @@
       <Normal> { 0.938597 -0.338523 -0.066614 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 485 481 458 454 <Ref> { Character } }
     }
@@ -9338,6 +9532,7 @@
       <Normal> { 0.456848 -0.887949 -0.053265 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 454 458 429 <Ref> { Character } }
     }
@@ -9345,6 +9540,7 @@
       <Normal> { 0.333985 -0.600331 -0.726675 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 375 429 372 <Ref> { Character } }
     }
@@ -9352,6 +9548,7 @@
       <Normal> { 0.399169 -0.916786 -0.012923 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 374 429 458 <Ref> { Character } }
     }
@@ -9359,6 +9556,7 @@
       <Normal> { 0.363265 -0.771684 -0.522055 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 454 429 428 <Ref> { Character } }
     }
@@ -9366,6 +9564,7 @@
       <Normal> { 0.296407 -0.854684 -0.426215 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 428 429 375 <Ref> { Character } }
     }
@@ -9373,6 +9572,7 @@
       <Normal> { 0.576792 -0.786096 -0.222181 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 428 430 439 454 <Ref> { Character } }
     }
@@ -9380,6 +9580,7 @@
       <Normal> { 0.278787 -0.948804 -0.148491 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 430 428 375 384 <Ref> { Character } }
     }
@@ -9387,6 +9588,7 @@
       <Normal> { 0.200133 -0.188831 -0.9614 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 391 430 384 <Ref> { Character } }
     }
@@ -9394,6 +9596,7 @@
       <Normal> { 0.194048 0.792333 -0.578407 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 402 408 445 438 <Ref> { Character } }
     }
@@ -9401,6 +9604,7 @@
       <Normal> { 0.733489 -0.358575 0.577423 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 481 433 458 <Ref> { Character } }
     }
@@ -9408,6 +9612,7 @@
       <Normal> { 0.413067 -0.852505 -0.320329 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 486 490 489 482 <Ref> { Character } }
     }
@@ -9415,6 +9620,7 @@
       <Normal> { 0.55499 -0.508056 -0.658685 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 434 448 373 379 <Ref> { Character } }
     }
@@ -9422,6 +9628,7 @@
       <Normal> { 0.38279 -0.839981 0.384581 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 458 433 378 374 <Ref> { Character } }
     }
@@ -9429,6 +9636,7 @@
       <Normal> { 0.681112 0.082598 -0.727505 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 438 445 490 486 <Ref> { Character } }
     }
@@ -9436,6 +9644,7 @@
       <Normal> { 0.285741 -0.846763 -0.448714 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 482 489 448 434 <Ref> { Character } }
     }
@@ -9443,6 +9652,7 @@
       <Normal> { 0.975482 0.202861 0.085341 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 455 456 489 490 <Ref> { Character } }
     }
@@ -9450,6 +9660,7 @@
       <Normal> { 0.189304 0.963601 -0.188779 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 408 416 455 445 <Ref> { Character } }
     }
@@ -9457,6 +9668,7 @@
       <Normal> { 0.197284 0.964707 0.174414 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 416 410 456 455 <Ref> { Character } }
     }
@@ -9464,6 +9676,7 @@
       <Normal> { 0.132977 -0.060375 0.989279 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 476 393 457 <Ref> { Character } }
     }
@@ -9471,6 +9684,7 @@
       <Normal> { 0.324138 0.924176 0.20207 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 449 409 407 444 <Ref> { Character } }
     }
@@ -9478,6 +9692,7 @@
       <Normal> { 0.974347 0.218239 0.054952 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 456 449 484 489 <Ref> { Character } }
     }
@@ -9485,6 +9700,7 @@
       <Normal> { 0.131485 0.065189 0.989172 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 444 393 476 <Ref> { Character } }
     }
@@ -9492,6 +9708,7 @@
       <Normal> { 0.960404 -0.277775 0.021573 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 448 484 476 457 <Ref> { Character } }
     }
@@ -9499,6 +9716,7 @@
       <Normal> { 0.261709 0.949848 0.171165 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 410 409 449 456 <Ref> { Character } }
     }
@@ -9506,6 +9724,7 @@
       <Normal> { 0.066251 -0.130049 0.989292 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 457 393 371 <Ref> { Character } }
     }
@@ -9513,6 +9732,7 @@
       <Normal> { 0.532182 -0.837658 -0.122925 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 373 448 457 371 <Ref> { Character } }
     }
@@ -9520,6 +9740,7 @@
       <Normal> { 0.088925 0.095249 0.991474 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 407 393 444 <Ref> { Character } }
     }
@@ -9527,6 +9748,7 @@
       <Normal> { 0.927197 0.261659 0.26803 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 484 449 444 476 <Ref> { Character } }
     }
@@ -9534,6 +9756,7 @@
       <Normal> { 0.928509 0.333122 -0.164014 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 455 490 445 <Ref> { Character } }
     }
@@ -9541,6 +9764,7 @@
       <Normal> { 0.852646 -0.346564 0.391009 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 484 448 489 <Ref> { Character } }
     }
@@ -9548,6 +9772,7 @@
       <Normal> { -0.104484 0.946757 -0.304523 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 488 487 398 424 <Ref> { Character } }
     }
@@ -9555,6 +9780,7 @@
       <Normal> { -0.494163 0.868101 -0.046947 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 532 533 477 469 <Ref> { Character } }
     }
@@ -9562,6 +9788,7 @@
       <Normal> { 0.643456 -0.76542 -0.009812 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 534 538 593 590 <Ref> { Character } }
     }
@@ -9569,6 +9796,7 @@
       <Normal> { -0.914242 -0.384483 -0.127807 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 443 447 478 468 <Ref> { Character } }
     }
@@ -9576,6 +9804,7 @@
       <Normal> { -0.37993 -0.922238 -0.071629 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 468 478 538 534 <Ref> { Character } }
     }
@@ -9583,6 +9812,7 @@
       <Normal> { 0.537889 0.843015 -0.001171 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 599 602 533 532 <Ref> { Character } }
     }
@@ -9590,6 +9820,7 @@
       <Normal> { 0.965396 0.259545 0.025449 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 608 609 602 599 <Ref> { Character } }
     }
@@ -9597,6 +9828,7 @@
       <Normal> { -0.486055 0.868565 -0.096676 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 527 532 469 453 <Ref> { Character } }
     }
@@ -9604,6 +9836,7 @@
       <Normal> { 0.648178 -0.761486 0.002316 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 526 534 590 582 <Ref> { Character } }
     }
@@ -9611,6 +9844,7 @@
       <Normal> { -0.909994 -0.375337 -0.176159 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 436 443 468 452 <Ref> { Character } }
     }
@@ -9618,6 +9852,7 @@
       <Normal> { -0.375089 -0.920036 -0.113321 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 452 468 534 526 <Ref> { Character } }
     }
@@ -9625,6 +9860,7 @@
       <Normal> { 0.550591 0.83429 -0.028471 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 598 599 532 527 <Ref> { Character } }
     }
@@ -9632,6 +9868,7 @@
       <Normal> { 0.967586 0.247702 0.049202 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 607 608 599 598 <Ref> { Character } }
     }
@@ -9639,6 +9876,7 @@
       <Normal> { -0.34772 -0.93746 -0.016113 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 478 500 558 538 <Ref> { Character } }
     }
@@ -9646,6 +9884,7 @@
       <Normal> { 0.601018 0.799183 -0.009169 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 602 605 571 533 <Ref> { Character } }
     }
@@ -9653,6 +9892,7 @@
       <Normal> { 0.945989 0.324125 0.00683 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 609 610 605 602 <Ref> { Character } }
     }
@@ -9660,6 +9900,7 @@
       <Normal> { -0.376617 0.915774 -0.139708 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 487 527 453 398 <Ref> { Character } }
     }
@@ -9667,6 +9908,7 @@
       <Normal> { 0.958511 0.258775 0.119553 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 568 607 598 536 <Ref> { Character } }
     }
@@ -9674,6 +9916,7 @@
       <Normal> { -0.955875 -0.171221 -0.238718 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 396 436 452 389 <Ref> { Character } }
     }
@@ -9681,6 +9924,7 @@
       <Normal> { 0.491433 0.870502 0.026819 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 536 598 527 487 <Ref> { Character } }
     }
@@ -9688,6 +9932,7 @@
       <Normal> { 0.90496 -0.408145 0.120272 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 535 582 607 568 <Ref> { Character } }
     }
@@ -9695,6 +9940,7 @@
       <Normal> { 0.945264 -0.294027 0.141505 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 528 535 568 547 <Ref> { Character } }
     }
@@ -9702,6 +9948,7 @@
       <Normal> { -0.496533 0.864744 -0.075324 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 533 571 508 477 <Ref> { Character } }
     }
@@ -9709,6 +9956,7 @@
       <Normal> { -0.937085 0.331744 -0.108706 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 469 477 446 442 <Ref> { Character } }
     }
@@ -9716,6 +9964,7 @@
       <Normal> { 0.850547 -0.525711 0.01407 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 590 593 609 608 <Ref> { Character } }
     }
@@ -9723,6 +9972,7 @@
       <Normal> { -0.929734 0.324796 -0.173499 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 453 469 442 435 <Ref> { Character } }
     }
@@ -9730,6 +9980,7 @@
       <Normal> { 0.850027 -0.526518 0.015264 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 582 590 608 607 <Ref> { Character } }
     }
@@ -9737,6 +9988,7 @@
       <Normal> { -0.976353 -0.197099 -0.088803 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 447 499 500 478 <Ref> { Character } }
     }
@@ -9744,6 +9996,7 @@
       <Normal> { -0.920401 0.382232 -0.082222 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 477 508 498 446 <Ref> { Character } }
     }
@@ -9751,6 +10004,7 @@
       <Normal> { 0.978563 -0.198839 0.053648 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 593 612 610 609 <Ref> { Character } }
     }
@@ -9758,6 +10012,7 @@
       <Normal> { -0.956309 0.170075 -0.237796 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 398 453 435 394 <Ref> { Character } }
     }
@@ -9765,6 +10020,7 @@
       <Normal> { -0.026386 -0.212778 0.976744 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 380 370 466 479 <Ref> { Character } }
     }
@@ -9772,6 +10028,7 @@
       <Normal> { 0.699096 0.102281 0.707675 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 570 572 550 546 <Ref> { Character } }
     }
@@ -9779,6 +10036,7 @@
       <Normal> { 0.114211 -0.32747 0.937933 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 479 466 549 545 <Ref> { Character } }
     }
@@ -9786,6 +10044,7 @@
       <Normal> { 0.624777 -0.255149 0.737938 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 545 549 572 570 <Ref> { Character } }
     }
@@ -9793,6 +10052,7 @@
       <Normal> { 0.019813 0.247018 0.968808 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 480 467 427 419 <Ref> { Character } }
     }
@@ -9800,6 +10060,7 @@
       <Normal> { 0.192219 0.314028 0.929752 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 546 550 467 480 <Ref> { Character } }
     }
@@ -9807,6 +10068,7 @@
       <Normal> { -0.808307 -0.21306 0.548859 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 540 570 546 524 <Ref> { Character } }
     }
@@ -9814,6 +10076,7 @@
       <Normal> { -0.623069 0.631241 0.461865 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 470 479 545 522 <Ref> { Character } }
     }
@@ -9821,6 +10084,7 @@
       <Normal> { 0.006104 -0.967563 0.252555 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 472 480 419 414 <Ref> { Character } }
     }
@@ -9828,6 +10092,7 @@
       <Normal> { -0.168569 0.871004 0.46145 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 387 380 479 470 <Ref> { Character } }
     }
@@ -9835,6 +10100,7 @@
       <Normal> { -0.39757 -0.865569 0.304513 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 524 546 480 472 <Ref> { Character } }
     }
@@ -9842,6 +10108,7 @@
       <Normal> { -0.813608 0.145875 0.562817 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 522 545 570 540 <Ref> { Character } }
     }
@@ -9849,6 +10116,7 @@
       <Normal> { 0.07371 -0.422518 -0.903352 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 674 681 677 672 <Ref> { Character } }
     }
@@ -9856,6 +10124,7 @@
       <Normal> { 0.108641 0.317237 0.942103 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 668 691 693 669 <Ref> { Character } }
     }
@@ -9863,6 +10132,7 @@
       <Normal> { 0.100949 -0.795729 0.59718 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 670 685 689 667 <Ref> { Character } }
     }
@@ -9870,6 +10140,7 @@
       <Normal> { 0.049625 0.68932 -0.722756 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 671 687 683 675 <Ref> { Character } }
     }
@@ -9877,6 +10148,7 @@
       <Normal> { 0.058684 -0.597816 -0.799483 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 672 677 685 670 <Ref> { Character } }
     }
@@ -9884,6 +10156,7 @@
       <Normal> { 0.089274 0.938026 0.334869 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 669 693 687 671 <Ref> { Character } }
     }
@@ -9891,6 +10164,7 @@
       <Normal> { 0.071449 0.42259 -0.9035 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 675 683 680 673 <Ref> { Character } }
     }
@@ -9898,6 +10172,7 @@
       <Normal> { 0.105298 -0.317363 0.94244 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 667 689 691 668 <Ref> { Character } }
     }
@@ -9905,6 +10180,7 @@
       <Normal> { 0.697581 -0.101586 -0.709268 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 712 703 704 715 <Ref> { Character } }
     }
@@ -9912,6 +10188,7 @@
       <Normal> { 0.099766 -0.250041 -0.963082 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 695 704 703 694 <Ref> { Character } }
     }
@@ -9919,6 +10196,7 @@
       <Normal> { 0.140881 0.210995 0.967282 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 701 710 711 702 <Ref> { Character } }
     }
@@ -9926,6 +10204,7 @@
       <Normal> { 0.133264 -0.845867 0.516479 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 698 707 709 700 <Ref> { Character } }
     }
@@ -9933,6 +10212,7 @@
       <Normal> { 0.067357 0.737843 -0.671603 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 699 708 706 697 <Ref> { Character } }
     }
@@ -9940,6 +10220,7 @@
       <Normal> { 0.083758 -0.683065 -0.725539 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 694 703 707 698 <Ref> { Character } }
     }
@@ -9947,6 +10228,7 @@
       <Normal> { 0.115824 0.945014 0.305833 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 702 711 708 699 <Ref> { Character } }
     }
@@ -9954,6 +10236,7 @@
       <Normal> { 0.098023 0.250087 -0.963249 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 697 706 705 696 <Ref> { Character } }
     }
@@ -9961,6 +10244,7 @@
       <Normal> { 0.137993 -0.211094 0.967676 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 700 709 710 701 <Ref> { Character } }
     }
@@ -9968,6 +10252,7 @@
       <Normal> { -0.899682 -0.352122 0.258036 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 684 698 700 688 <Ref> { Character } }
     }
@@ -9975,6 +10260,7 @@
       <Normal> { -0.865121 -0.136892 0.482521 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 688 700 701 690 <Ref> { Character } }
     }
@@ -9982,6 +10268,7 @@
       <Normal> { -0.872817 0.133212 0.469516 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 690 701 702 692 <Ref> { Character } }
     }
@@ -9989,6 +10276,7 @@
       <Normal> { -0.908235 0.391024 0.149028 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 692 702 699 686 <Ref> { Character } }
     }
@@ -9996,6 +10284,7 @@
       <Normal> { -0.877672 0.352279 -0.324949 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 686 699 697 682 <Ref> { Character } }
     }
@@ -10003,6 +10292,7 @@
       <Normal> { -0.829897 0.192456 -0.523672 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 682 697 696 679 <Ref> { Character } }
     }
@@ -10010,6 +10300,7 @@
       <Normal> { -0.835409 -0.189583 -0.515898 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 678 695 694 676 <Ref> { Character } }
     }
@@ -10017,6 +10308,7 @@
       <Normal> { -0.880262 -0.311697 -0.357748 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 676 694 698 684 <Ref> { Character } }
     }
@@ -10024,6 +10316,7 @@
       <Normal> { -0.211095 -0.971399 -0.108731 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 389 452 526 483 <Ref> { Character } }
     }
@@ -10031,6 +10324,7 @@
       <Normal> { 0.656138 -0.751569 0.068025 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 483 526 582 535 <Ref> { Character } }
     }
@@ -10038,6 +10332,7 @@
       <Normal> { 0.506622 -0.861448 0.035219 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 538 558 612 593 <Ref> { Character } }
     }
@@ -10045,6 +10340,7 @@
       <Normal> { -0.061028 0.991446 0.115368 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 462 488 424 420 <Ref> { Character } }
     }
@@ -10052,6 +10348,7 @@
       <Normal> { 0.651804 -0.751345 0.103115 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 460 483 535 528 <Ref> { Character } }
     }
@@ -10059,6 +10356,7 @@
       <Normal> { 0.966324 0.22956 0.116277 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 547 568 536 530 <Ref> { Character } }
     }
@@ -10066,6 +10364,7 @@
       <Normal> { 0.510696 0.841102 0.178151 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 530 536 488 462 <Ref> { Character } }
     }
@@ -10073,6 +10372,7 @@
       <Normal> { 0.620336 0.770369 -0.147361 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 536 487 488 <Ref> { Character } }
     }
@@ -10080,6 +10380,7 @@
       <Normal> { 0.129938 -0.991522 -0.000409 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 381 383 483 460 <Ref> { Character } }
     }
@@ -10087,6 +10388,7 @@
       <Normal> { 0.426682 -0.752823 -0.501199 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 383 389 483 <Ref> { Character } }
     }
@@ -10094,6 +10396,7 @@
       <Normal> { -0.02398 0.946631 0.321426 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 304 333 412 411 <Ref> { Character } }
     }
@@ -10101,6 +10404,7 @@
       <Normal> { -0.560643 0.332837 -0.758221 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 201 191 184 183 <Ref> { Character } }
     }
@@ -10108,6 +10412,7 @@
       <Normal> { -0.165056 -0.983777 -0.070277 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 322 325 388 385 <Ref> { Character } }
     }
@@ -10115,6 +10420,7 @@
       <Normal> { -0.803801 -0.40197 0.438547 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 303 338 357 347 <Ref> { Character } }
     }
@@ -10122,6 +10428,7 @@
       <Normal> { -0.380469 0.58644 0.715074 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 205 222 333 304 <Ref> { Character } }
     }
@@ -10129,6 +10436,7 @@
       <Normal> { -0.648649 -0.757268 -0.076162 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 260 273 325 322 <Ref> { Character } }
     }
@@ -10136,6 +10444,7 @@
       <Normal> { -0.388293 -0.212669 0.896661 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 224 223 338 303 <Ref> { Character } }
     }
@@ -10143,6 +10452,7 @@
       <Normal> { 0.202536 0.931969 -0.300689 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 305 306 417 406 <Ref> { Character } }
     }
@@ -10150,6 +10460,7 @@
       <Normal> { -0.843044 0.222009 -0.489886 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 242 240 191 201 <Ref> { Character } }
     }
@@ -10157,6 +10468,7 @@
       <Normal> { -0.14945 -0.988769 0 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 301 300 376 377 <Ref> { Character } }
     }
@@ -10164,6 +10476,7 @@
       <Normal> { -0.339827 0.887312 -0.31176 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 228 186 306 305 <Ref> { Character } }
     }
@@ -10171,6 +10484,7 @@
       <Normal> { -0.523578 -0.851847 -0.014958 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 206 191 300 301 <Ref> { Character } }
     }
@@ -10178,6 +10492,7 @@
       <Normal> { -0.100904 -0.938897 -0.329076 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 300 302 386 376 <Ref> { Character } }
     }
@@ -10185,6 +10500,7 @@
       <Normal> { -0.574965 -0.755539 -0.313967 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 191 240 302 300 <Ref> { Character } }
     }
@@ -10192,6 +10508,7 @@
       <Normal> { 0.219113 0.96656 -0.133234 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 323 305 406 397 <Ref> { Character } }
     }
@@ -10199,6 +10516,7 @@
       <Normal> { -0.993689 -0.060665 -0.094347 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 254 260 240 242 <Ref> { Character } }
     }
@@ -10206,6 +10524,7 @@
       <Normal> { -0.420019 0.882405 -0.212004 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 258 228 305 323 <Ref> { Character } }
     }
@@ -10213,6 +10532,7 @@
       <Normal> { -0.89089 0.387625 -0.236772 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 365 346 332 359 <Ref> { Character } }
     }
@@ -10220,6 +10540,7 @@
       <Normal> { -0.217124 0.931589 0.291545 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 412 333 366 403 <Ref> { Character } }
     }
@@ -10227,6 +10548,7 @@
       <Normal> { -0.320662 -0.920354 0.223882 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 338 390 392 357 <Ref> { Character } }
     }
@@ -10234,6 +10556,7 @@
       <Normal> { -0.318123 -0.040826 -0.94717 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 183 184 170 173 <Ref> { Character } }
     }
@@ -10241,6 +10564,7 @@
       <Normal> { 0.04165 0.32158 0.945966 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 224 222 177 176 <Ref> { Character } }
     }
@@ -10248,6 +10572,7 @@
       <Normal> { 0.002287 -0.695058 0.71895 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 206 223 178 180 <Ref> { Character } }
     }
@@ -10255,6 +10580,7 @@
       <Normal> { -0.092473 0.995555 -0.017885 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 205 186 181 179 <Ref> { Character } }
     }
@@ -10262,6 +10588,7 @@
       <Normal> { 0.044419 -0.453593 -0.890101 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 174 171 156 162 <Ref> { Character } }
     }
@@ -10269,6 +10596,7 @@
       <Normal> { -0.361606 0.488451 0.794139 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 176 177 158 152 <Ref> { Character } }
     }
@@ -10276,6 +10604,7 @@
       <Normal> { -0.39773 -0.873442 0.28091 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 180 178 160 166 <Ref> { Character } }
     }
@@ -10283,6 +10612,7 @@
       <Normal> { -0.454958 0.872476 -0.17832 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 179 181 168 164 <Ref> { Character } }
     }
@@ -10290,6 +10620,7 @@
       <Normal> { 0.563314 0.82473 0.049973 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 237 277 279 233 <Ref> { Character } }
     }
@@ -10297,6 +10628,7 @@
       <Normal> { -0.980997 -0.039341 0.189992 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 212 194 197 218 <Ref> { Character } }
     }
@@ -10304,6 +10636,7 @@
       <Normal> { 0.247414 -0.356735 0.900848 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 288 235 243 286 <Ref> { Character } }
     }
@@ -10311,6 +10644,7 @@
       <Normal> { -0.40472 -0.289394 0.867441 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 235 212 218 243 <Ref> { Character } }
     }
@@ -10318,6 +10652,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 230 295 293 238 <Ref> { Character } }
     }
@@ -10325,6 +10660,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 193 230 238 196 <Ref> { Character } }
     }
@@ -10332,6 +10668,7 @@
       <Normal> { -0.237886 -0.19177 0.952174 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 243 218 219 246 <Ref> { Character } }
     }
@@ -10339,6 +10676,7 @@
       <Normal> { 0.318414 -0.19196 0.928312 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 286 243 246 280 <Ref> { Character } }
     }
@@ -10346,6 +10684,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 231 232 278 284 <Ref> { Character } }
     }
@@ -10353,6 +10692,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 202 213 232 231 <Ref> { Character } }
     }
@@ -10360,6 +10700,7 @@
       <Normal> { 0.995664 0.091943 0.014155 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 292 288 296 285 <Ref> { Character } }
     }
@@ -10367,6 +10708,7 @@
       <Normal> { 0.996964 -0.017712 0.075822 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 296 288 286 294 <Ref> { Character } }
     }
@@ -10374,6 +10716,7 @@
       <Normal> { -0.700343 0.704677 0.113799 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 221 237 233 214 <Ref> { Character } }
     }
@@ -10381,6 +10724,7 @@
       <Normal> { -0.923618 0.350814 0.154463 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 217 221 214 203 <Ref> { Character } }
     }
@@ -10388,6 +10732,7 @@
       <Normal> { -0.011249 -0.447911 -0.894007 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 162 156 145 147 <Ref> { Character } }
     }
@@ -10395,6 +10740,7 @@
       <Normal> { 0.073347 0.428906 0.900366 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 153 159 150 149 <Ref> { Character } }
     }
@@ -10402,6 +10748,7 @@
       <Normal> { 0.150362 -0.840591 0.520383 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 167 161 151 155 <Ref> { Character } }
     }
@@ -10409,6 +10756,7 @@
       <Normal> { 0.084807 0.920663 -0.381034 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 165 169 157 154 <Ref> { Character } }
     }
@@ -10416,6 +10764,7 @@
       <Normal> { -0.101951 -0.383074 -0.918074 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 147 145 136 137 <Ref> { Character } }
     }
@@ -10423,6 +10772,7 @@
       <Normal> { -0.049461 0.387791 0.920419 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 149 150 141 140 <Ref> { Character } }
     }
@@ -10430,6 +10780,7 @@
       <Normal> { -0.015128 -0.913873 0.405718 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 155 151 142 143 <Ref> { Character } }
     }
@@ -10437,6 +10788,7 @@
       <Normal> { 0.0227 0.754761 -0.655607 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 154 157 146 144 <Ref> { Character } }
     }
@@ -10444,6 +10796,7 @@
       <Normal> { 0.03183 -0.420485 -0.906741 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 137 136 122 123 <Ref> { Character } }
     }
@@ -10451,6 +10804,7 @@
       <Normal> { -0.263127 0.346355 0.900446 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 140 141 133 132 <Ref> { Character } }
     }
@@ -10458,6 +10812,7 @@
       <Normal> { -0.20387 -0.894377 0.398154 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 143 142 131 134 <Ref> { Character } }
     }
@@ -10465,6 +10820,7 @@
       <Normal> { -0.118872 0.759016 -0.640129 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 144 146 139 135 <Ref> { Character } }
     }
@@ -10472,6 +10828,7 @@
       <Normal> { 0.136903 0.365114 0.920842 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 132 133 130 129 <Ref> { Character } }
     }
@@ -10479,6 +10836,7 @@
       <Normal> { 0.171702 -0.821296 0.54405 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 134 131 128 126 <Ref> { Character } }
     }
@@ -10486,6 +10844,7 @@
       <Normal> { 0.031678 0.735251 -0.677055 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 135 139 125 127 <Ref> { Character } }
     }
@@ -10493,6 +10852,7 @@
       <Normal> { 0.019125 0.821656 -0.569663 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 75 85 62 58 <Ref> { Character } }
     }
@@ -10500,6 +10860,7 @@
       <Normal> { -0.849617 0.514412 0.116321 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 74 72 88 90 <Ref> { Character } }
     }
@@ -10507,6 +10868,7 @@
       <Normal> { -0.835627 -0.504445 0.217398 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 68 76 89 86 <Ref> { Character } }
     }
@@ -10514,6 +10876,7 @@
       <Normal> { -0.695477 -0.096128 0.712089 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 70 68 86 87 <Ref> { Character } }
     }
@@ -10521,6 +10884,7 @@
       <Normal> { 0.111261 0.993008 0.039447 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 306 304 411 417 <Ref> { Character } }
     }
@@ -10528,6 +10892,7 @@
       <Normal> { -0.205182 0.977697 0.044816 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 186 205 304 306 <Ref> { Character } }
     }
@@ -10535,6 +10900,7 @@
       <Normal> { -0.15196 -0.50132 0.851814 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 338 301 377 390 <Ref> { Character } }
     }
@@ -10542,6 +10908,7 @@
       <Normal> { -0.435525 -0.359061 0.825465 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 223 206 301 338 <Ref> { Character } }
     }
@@ -10549,6 +10916,7 @@
       <Normal> { -0.208721 -0.968205 -0.137891 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 191 206 180 184 <Ref> { Character } }
     }
@@ -10556,6 +10924,7 @@
       <Normal> { 0.093645 0.824876 0.557504 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 222 205 179 177 <Ref> { Character } }
     }
@@ -10563,6 +10932,7 @@
       <Normal> { -0.367175 -0.896983 -0.246179 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 184 180 166 170 <Ref> { Character } }
     }
@@ -10570,6 +10940,7 @@
       <Normal> { -0.353588 0.925835 0.133437 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 177 179 164 158 <Ref> { Character } }
     }
@@ -10577,6 +10948,7 @@
       <Normal> { 0.093823 -0.921835 -0.376055 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 171 167 155 156 <Ref> { Character } }
     }
@@ -10584,6 +10956,7 @@
       <Normal> { 0.177913 0.900108 0.397684 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 159 165 154 150 <Ref> { Character } }
     }
@@ -10591,6 +10964,7 @@
       <Normal> { 0.022701 -0.754759 -0.655609 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 156 155 143 145 <Ref> { Character } }
     }
@@ -10598,6 +10972,7 @@
       <Normal> { -0.009541 0.966689 0.255777 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 150 154 144 141 <Ref> { Character } }
     }
@@ -10605,6 +10980,7 @@
       <Normal> { -0.096259 -0.786505 -0.610037 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 145 143 134 136 <Ref> { Character } }
     }
@@ -10612,6 +10988,7 @@
       <Normal> { -0.200573 0.947899 0.247503 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 141 144 135 133 <Ref> { Character } }
     }
@@ -10619,6 +10996,7 @@
       <Normal> { 0.063187 -0.69539 -0.715849 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 136 134 126 122 <Ref> { Character } }
     }
@@ -10626,6 +11004,7 @@
       <Normal> { 0.119016 0.941152 0.316336 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 133 135 127 130 <Ref> { Character } }
     }
@@ -10633,6 +11012,7 @@
       <Normal> { 0.101041 -0.861126 -0.49825 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 80 77 67 61 <Ref> { Character } }
     }
@@ -10640,6 +11020,7 @@
       <Normal> { -0.694285 0.102032 -0.712431 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 81 84 94 92 <Ref> { Character } }
     }
@@ -10647,6 +11028,7 @@
       <Normal> { -0.834254 0.394656 -0.385056 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 84 74 90 94 <Ref> { Character } }
     }
@@ -10654,6 +11036,7 @@
       <Normal> { 0.314779 0.072782 -0.946371 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 211 234 239 185 <Ref> { Character } }
     }
@@ -10661,6 +11044,7 @@
       <Normal> { -0.474024 -0.316657 -0.821602 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 186 200 182 181 <Ref> { Character } }
     }
@@ -10668,6 +11052,7 @@
       <Normal> { -0.788823 0.302165 0.535214 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 333 303 347 366 <Ref> { Character } }
     }
@@ -10675,6 +11060,7 @@
       <Normal> { -0.349196 0.16105 0.923106 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 222 224 303 333 <Ref> { Character } }
     }
@@ -10682,6 +11068,7 @@
       <Normal> { -0.872098 -0.285023 -0.397752 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 228 241 200 186 <Ref> { Character } }
     }
@@ -10689,6 +11076,7 @@
       <Normal> { -0.991228 -0.063827 -0.115726 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 258 253 241 228 <Ref> { Character } }
     }
@@ -10696,6 +11084,7 @@
       <Normal> { -0.794112 -0.14135 -0.591107 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 250 267 247 225 <Ref> { Character } }
     }
@@ -10703,6 +11092,7 @@
       <Normal> { -0.838451 -0.241118 -0.488735 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 346 356 358 332 <Ref> { Character } }
     }
@@ -10710,6 +11100,7 @@
       <Normal> { -0.394557 -0.032726 -0.918288 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 181 182 172 168 <Ref> { Character } }
     }
@@ -10717,6 +11108,7 @@
       <Normal> { 0.041652 -0.321584 0.945965 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 223 224 176 178 <Ref> { Character } }
     }
@@ -10724,6 +11116,7 @@
       <Normal> { 0.039515 0.452877 -0.890697 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 169 175 163 157 <Ref> { Character } }
     }
@@ -10731,6 +11124,7 @@
       <Normal> { -0.35262 -0.48756 0.798714 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 178 176 152 160 <Ref> { Character } }
     }
@@ -10738,6 +11132,7 @@
       <Normal> { -0.375576 0.850992 -0.367089 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 336 269 248 331 <Ref> { Character } }
     }
@@ -10745,6 +11140,7 @@
       <Normal> { 0.648806 -0.400336 -0.647134 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 216 211 185 187 <Ref> { Character } }
     }
@@ -10752,6 +11148,7 @@
       <Normal> { -0.649716 -0.672386 -0.354635 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 290 276 289 298 <Ref> { Character } }
     }
@@ -10759,6 +11156,7 @@
       <Normal> { -0.240702 0.261844 -0.934612 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 234 287 297 239 <Ref> { Character } }
     }
@@ -10766,6 +11164,7 @@
       <Normal> { -0.176671 -0.784405 -0.594556 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 335 382 370 330 <Ref> { Character } }
     }
@@ -10773,6 +11172,7 @@
       <Normal> { 0.010863 0.939781 -0.341603 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 422 336 331 426 <Ref> { Character } }
     }
@@ -10780,6 +11180,7 @@
       <Normal> { -0.485736 -0.826747 -0.283811 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 276 236 226 289 <Ref> { Character } }
     }
@@ -10787,6 +11188,7 @@
       <Normal> { 0.655373 -0.39255 -0.645283 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 220 216 187 192 <Ref> { Character } }
     }
@@ -10794,6 +11196,7 @@
       <Normal> { 0.569758 -0.569899 -0.592107 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 236 220 192 226 <Ref> { Character } }
     }
@@ -10801,6 +11204,7 @@
       <Normal> { -0.597726 -0.610308 -0.519854 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 267 335 330 247 <Ref> { Character } }
     }
@@ -10808,6 +11212,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 230 231 284 295 <Ref> { Character } }
     }
@@ -10815,6 +11220,7 @@
       <Normal> { 0 0 -1 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 193 202 231 230 <Ref> { Character } }
     }
@@ -10822,6 +11228,7 @@
       <Normal> { 0.90834 0.417253 0.028594 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 277 292 285 279 <Ref> { Character } }
     }
@@ -10829,6 +11236,7 @@
       <Normal> { -0.973911 0.183733 0.133189 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 212 217 203 194 <Ref> { Character } }
     }
@@ -10836,6 +11244,7 @@
       <Normal> { -0.01125 0.447912 -0.894007 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 157 163 148 146 <Ref> { Character } }
     }
@@ -10843,6 +11252,7 @@
       <Normal> { 0.063415 -0.433234 0.899048 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 161 153 149 151 <Ref> { Character } }
     }
@@ -10850,6 +11260,7 @@
       <Normal> { -0.112371 0.395783 -0.911443 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 146 148 138 139 <Ref> { Character } }
     }
@@ -10857,6 +11268,7 @@
       <Normal> { -0.049458 -0.387797 0.920417 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 151 149 140 142 <Ref> { Character } }
     }
@@ -10864,6 +11276,7 @@
       <Normal> { 0.036105 0.435365 -0.89953 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 139 138 124 125 <Ref> { Character } }
     }
@@ -10871,6 +11284,7 @@
       <Normal> { -0.257393 -0.346919 0.901885 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 142 140 132 131 <Ref> { Character } }
     }
@@ -10878,6 +11292,7 @@
       <Normal> { -0.841036 -0.385862 -0.379169 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 76 78 91 89 <Ref> { Character } }
     }
@@ -10885,6 +11300,7 @@
       <Normal> { 0.128999 -0.36551 0.921825 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 131 132 129 128 <Ref> { Character } }
     }
@@ -10892,6 +11308,7 @@
       <Normal> { -0.018501 0.115755 0.993105 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 71 73 63 65 <Ref> { Character } }
     }
@@ -10899,6 +11316,7 @@
       <Normal> { -0.703314 0.095078 0.704492 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 72 70 87 88 <Ref> { Character } }
     }
@@ -10906,6 +11324,7 @@
       <Normal> { 0.208925 -0.057716 -0.976227 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 83 79 60 57 <Ref> { Character } }
     }
@@ -10913,6 +11332,7 @@
       <Normal> { -0.938543 -0.033339 -0.343548 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 287 291 299 297 <Ref> { Character } }
     }
@@ -10920,6 +11340,7 @@
       <Normal> { -0.791299 0.201168 -0.577389 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 269 250 225 248 <Ref> { Character } }
     }
@@ -10927,6 +11348,7 @@
       <Normal> { 0.04286 -0.996789 0.067634 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 280 246 245 282 <Ref> { Character } }
     }
@@ -10934,6 +11356,7 @@
       <Normal> { -0.329604 -0.939065 0.09756 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 246 219 209 245 <Ref> { Character } }
     }
@@ -10941,6 +11364,7 @@
       <Normal> { 0.0001 0.015869 -0.999874 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 238 293 281 244 <Ref> { Character } }
     }
@@ -10948,6 +11372,7 @@
       <Normal> { 0.004736 0.015735 -0.999865 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 196 238 244 208 <Ref> { Character } }
     }
@@ -10955,6 +11380,7 @@
       <Normal> { -0.976663 -0.107848 0.185736 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 218 197 210 219 <Ref> { Character } }
     }
@@ -10962,6 +11388,7 @@
       <Normal> { 0.98604 -0.112321 0.12292 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 294 286 280 283 <Ref> { Character } }
     }
@@ -10969,6 +11396,7 @@
       <Normal> { -0.165358 -0.986231 -0.002094 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 302 322 385 386 <Ref> { Character } }
     }
@@ -10976,6 +11404,7 @@
       <Normal> { -0.642777 -0.762422 -0.074494 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 240 260 322 302 <Ref> { Character } }
     }
@@ -10983,6 +11412,7 @@
       <Normal> { 0.109894 0.965708 0.235226 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 327 323 397 415 <Ref> { Character } }
     }
@@ -10990,6 +11420,7 @@
       <Normal> { -0.981815 -0.182594 -0.051945 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 257 273 260 254 <Ref> { Character } }
     }
@@ -10997,6 +11428,7 @@
       <Normal> { -0.417165 0.905874 0.073248 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 275 258 323 327 <Ref> { Character } }
     }
@@ -11004,6 +11436,7 @@
       <Normal> { -0.99058 0.121723 -0.062726 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 275 256 253 258 <Ref> { Character } }
     }
@@ -11011,6 +11444,7 @@
       <Normal> { -0.914235 0.358887 -0.18808 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 359 332 311 <Ref> { Character } }
     }
@@ -11018,6 +11452,7 @@
       <Normal> { -0.863449 -0.23262 -0.447598 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 332 358 343 311 <Ref> { Character } }
     }
@@ -11025,6 +11460,7 @@
       <Normal> { -0.287559 0.957564 -0.019518 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 405 365 359 400 <Ref> { Character } }
     }
@@ -11032,6 +11468,7 @@
       <Normal> { -0.283155 -0.226932 -0.93184 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 391 367 358 356 <Ref> { Character } }
     }
@@ -11039,6 +11476,7 @@
       <Normal> { -0.679025 -0.731903 0.056945 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 372 374 368 <Ref> { Character } }
     }
@@ -11046,6 +11484,7 @@
       <Normal> { -0.011015 0.839757 -0.54285 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 58 62 38 37 <Ref> { Character } }
     }
@@ -11053,6 +11492,7 @@
       <Normal> { -0.786418 -0.36958 -0.494932 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 34 42 51 45 <Ref> { Character } }
     }
@@ -11060,6 +11500,7 @@
       <Normal> { -0.021069 0.05796 0.998097 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 65 63 40 41 <Ref> { Character } }
     }
@@ -11067,6 +11508,7 @@
       <Normal> { -0.021237 0.019506 -0.999584 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 57 60 44 36 <Ref> { Character } }
     }
@@ -11074,6 +11516,7 @@
       <Normal> { 0.075619 0.140493 -0.98719 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 85 83 57 62 <Ref> { Character } }
     }
@@ -11081,6 +11524,7 @@
       <Normal> { -0.01851 -0.115771 0.993104 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 69 71 65 64 <Ref> { Character } }
     }
@@ -11088,6 +11532,7 @@
       <Normal> { 0.008054 -0.891406 0.453133 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 77 69 64 67 <Ref> { Character } }
     }
@@ -11095,6 +11540,7 @@
       <Normal> { 0.004485 0.957171 0.289489 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 73 75 58 63 <Ref> { Character } }
     }
@@ -11102,6 +11548,7 @@
       <Normal> { -0.017204 0.84609 -0.532762 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 37 38 18 22 <Ref> { Character } }
     }
@@ -11109,6 +11556,7 @@
       <Normal> { -0.038997 -0.881645 -0.470299 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 43 35 21 16 <Ref> { Character } }
     }
@@ -11116,6 +11564,7 @@
       <Normal> { -0.092606 0.01642 0.995567 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 41 40 19 23 <Ref> { Character } }
     }
@@ -11123,6 +11572,7 @@
       <Normal> { -0.116546 -0.000939 -0.993185 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 36 44 17 15 <Ref> { Character } }
     }
@@ -11130,6 +11580,7 @@
       <Normal> { -0.020103 0.141464 -0.989739 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 62 57 36 38 <Ref> { Character } }
     }
@@ -11137,6 +11588,7 @@
       <Normal> { -0.02107 -0.057976 0.998096 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 64 65 41 39 <Ref> { Character } }
     }
@@ -11144,6 +11596,7 @@
       <Normal> { -0.011718 -0.451659 0.892114 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 64 39 52 54 <Ref> { Character } }
     }
@@ -11151,6 +11604,7 @@
       <Normal> { 0.002855 0.955035 0.296479 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 63 58 37 40 <Ref> { Character } }
     }
@@ -11158,6 +11612,7 @@
       <Normal> { 0.01704 0.820046 -0.572043 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 22 18 14 12 <Ref> { Character } }
     }
@@ -11165,6 +11620,7 @@
       <Normal> { 0.015721 -0.820001 -0.572146 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 16 21 4 8 <Ref> { Character } }
     }
@@ -11172,6 +11628,7 @@
       <Normal> { -0.125461 0.029894 0.991648 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 23 19 10 0 <Ref> { Character } }
     }
@@ -11179,6 +11636,7 @@
       <Normal> { 0.002807 -0.001983 -0.999994 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 15 17 9 6 <Ref> { Character } }
     }
@@ -11186,6 +11644,7 @@
       <Normal> { -0.070763 0.072245 -0.994873 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 38 36 15 18 <Ref> { Character } }
     }
@@ -11193,6 +11652,7 @@
       <Normal> { -0.092606 -0.016438 0.995567 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 39 41 23 20 <Ref> { Character } }
     }
@@ -11200,6 +11660,7 @@
       <Normal> { -0.015143 -0.846833 0.531643 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 35 39 20 21 <Ref> { Character } }
     }
@@ -11207,6 +11668,7 @@
       <Normal> { -0.009653 0.93679 0.349759 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 40 37 22 19 <Ref> { Character } }
     }
@@ -11214,6 +11676,7 @@
       <Normal> { -0.994138 -0.018621 -0.106504 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 2 3 1 0 <Ref> { Character } }
     }
@@ -11221,6 +11684,7 @@
       <Normal> { -0.975302 -0.032746 -0.218434 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 5 7 3 2 <Ref> { Character } }
     }
@@ -11228,6 +11692,7 @@
       <Normal> { -0.984612 0.152113 -0.086028 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 11 2 0 10 <Ref> { Character } }
     }
@@ -11235,6 +11700,7 @@
       <Normal> { -0.951574 0.157637 -0.263927 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 13 5 2 11 <Ref> { Character } }
     }
@@ -11242,6 +11708,7 @@
       <Normal> { 0.002921 0.00177 -0.999994 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 18 15 6 14 <Ref> { Character } }
     }
@@ -11249,6 +11716,7 @@
       <Normal> { -0.12102 -0.020046 0.992448 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 20 23 0 1 <Ref> { Character } }
     }
@@ -11256,6 +11724,7 @@
       <Normal> { -0.058219 -0.750812 0.657945 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 21 20 1 4 <Ref> { Character } }
     }
@@ -11263,6 +11732,7 @@
       <Normal> { -0.044157 0.88561 0.462326 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 19 22 12 10 <Ref> { Character } }
     }
@@ -11270,6 +11740,7 @@
       <Normal> { -0.660659 0.739069 -0.131557 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 45 51 32 30 <Ref> { Character } }
     }
@@ -11277,6 +11748,7 @@
       <Normal> { -0.171111 -0.546334 0.819903 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 54 52 33 47 <Ref> { Character } }
     }
@@ -11284,6 +11756,7 @@
       <Normal> { -0.610339 -0.732163 0.302363 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 39 35 46 52 <Ref> { Character } }
     }
@@ -11291,6 +11764,7 @@
       <Normal> { -0.036002 0.400741 -0.915484 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 42 59 53 51 <Ref> { Character } }
     }
@@ -11298,6 +11772,7 @@
       <Normal> { 0.642558 -0.511682 -0.570352 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 59 66 55 53 <Ref> { Character } }
     }
@@ -11305,6 +11780,7 @@
       <Normal> { 0.596847 -0.731928 0.328717 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 67 64 54 56 <Ref> { Character } }
     }
@@ -11312,6 +11788,7 @@
       <Normal> { -0.505344 0.86153 0.048926 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 30 32 26 24 <Ref> { Character } }
     }
@@ -11319,6 +11796,7 @@
       <Normal> { -0.286013 -0.513149 0.809243 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 47 33 25 27 <Ref> { Character } }
     }
@@ -11326,6 +11804,7 @@
       <Normal> { -0.821803 0.343841 0.454328 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 52 46 31 33 <Ref> { Character } }
     }
@@ -11333,6 +11812,7 @@
       <Normal> { 0.008085 0.472596 -0.881242 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 51 53 48 32 <Ref> { Character } }
     }
@@ -11340,6 +11820,7 @@
       <Normal> { 0.602632 -0.431334 -0.671406 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 53 55 49 48 <Ref> { Character } }
     }
@@ -11347,6 +11828,7 @@
       <Normal> { 0.558038 -0.820195 0.125992 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 56 54 47 50 <Ref> { Character } }
     }
@@ -11354,6 +11836,7 @@
       <Normal> { -0.862725 -0.36668 -0.348213 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 28 29 24 26 <Ref> { Character } }
     }
@@ -11361,6 +11844,7 @@
       <Normal> { -0.866293 -0.378439 -0.326069 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 29 27 25 24 <Ref> { Character } }
     }
@@ -11368,6 +11852,7 @@
       <Normal> { -0.567605 0.46885 0.67676 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 33 31 24 25 <Ref> { Character } }
     }
@@ -11375,6 +11860,7 @@
       <Normal> { -0.075764 0.363993 -0.928315 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 32 48 28 26 <Ref> { Character } }
     }
@@ -11382,6 +11868,7 @@
       <Normal> { 0.186573 -0.657376 -0.730101 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 48 49 29 28 <Ref> { Character } }
     }
@@ -11389,6 +11876,7 @@
       <Normal> { 0.128468 -0.980534 -0.148488 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 50 47 27 29 <Ref> { Character } }
     }
@@ -11396,6 +11884,7 @@
       <Normal> { -0.938597 -0.338523 -0.066614 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 311 343 339 315 <Ref> { Character } }
     }
@@ -11403,6 +11892,7 @@
       <Normal> { -0.456848 -0.887949 -0.053265 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 343 368 339 <Ref> { Character } }
     }
@@ -11410,6 +11900,7 @@
       <Normal> { -0.333985 -0.600331 -0.726675 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 375 372 368 <Ref> { Character } }
     }
@@ -11417,6 +11908,7 @@
       <Normal> { -0.399169 -0.916786 -0.012923 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 374 339 368 <Ref> { Character } }
     }
@@ -11424,6 +11916,7 @@
       <Normal> { -0.363265 -0.771684 -0.522055 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 343 369 368 <Ref> { Character } }
     }
@@ -11431,6 +11924,7 @@
       <Normal> { -0.296407 -0.854684 -0.426215 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 369 375 368 <Ref> { Character } }
     }
@@ -11438,6 +11932,7 @@
       <Normal> { -0.576792 -0.786096 -0.222181 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 369 343 358 367 <Ref> { Character } }
     }
@@ -11445,6 +11940,7 @@
       <Normal> { -0.278787 -0.948804 -0.148491 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 367 384 375 369 <Ref> { Character } }
     }
@@ -11452,6 +11948,7 @@
       <Normal> { -0.200133 -0.188831 -0.9614 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 391 384 367 <Ref> { Character } }
     }
@@ -11459,6 +11956,7 @@
       <Normal> { -0.194048 0.792333 -0.578407 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 402 360 352 408 <Ref> { Character } }
     }
@@ -11466,6 +11964,7 @@
       <Normal> { -0.733489 -0.358575 0.577423 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 315 339 363 <Ref> { Character } }
     }
@@ -11473,6 +11972,7 @@
       <Normal> { -0.413067 -0.852505 -0.320329 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 312 316 308 307 <Ref> { Character } }
     }
@@ -11480,6 +11980,7 @@
       <Normal> { -0.55499 -0.508056 -0.658685 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 364 379 373 349 <Ref> { Character } }
     }
@@ -11487,6 +11988,7 @@
       <Normal> { -0.38279 -0.839981 0.384581 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 339 374 378 363 <Ref> { Character } }
     }
@@ -11494,6 +11996,7 @@
       <Normal> { -0.681112 0.082598 -0.727505 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 360 312 307 352 <Ref> { Character } }
     }
@@ -11501,6 +12004,7 @@
       <Normal> { -0.285741 -0.846763 -0.448714 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 316 364 349 308 <Ref> { Character } }
     }
@@ -11508,6 +12012,7 @@
       <Normal> { -0.975482 0.202861 0.085341 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 342 307 308 341 <Ref> { Character } }
     }
@@ -11515,6 +12020,7 @@
       <Normal> { -0.189304 0.963601 -0.188779 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 408 352 342 416 <Ref> { Character } }
     }
@@ -11522,6 +12028,7 @@
       <Normal> { -0.197284 0.964707 0.174414 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 416 342 341 410 <Ref> { Character } }
     }
@@ -11529,6 +12036,7 @@
       <Normal> { -0.132977 -0.060375 0.989278 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 321 340 393 <Ref> { Character } }
     }
@@ -11536,6 +12044,7 @@
       <Normal> { -0.324138 0.924176 0.20207 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 348 353 407 409 <Ref> { Character } }
     }
@@ -11543,6 +12052,7 @@
       <Normal> { -0.974347 0.218239 0.054952 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 341 308 313 348 <Ref> { Character } }
     }
@@ -11550,6 +12060,7 @@
       <Normal> { -0.131485 0.065189 0.989172 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 353 321 393 <Ref> { Character } }
     }
@@ -11557,6 +12068,7 @@
       <Normal> { -0.960404 -0.277775 0.021573 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 349 340 321 313 <Ref> { Character } }
     }
@@ -11564,6 +12076,7 @@
       <Normal> { -0.261709 0.949848 0.171165 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 410 341 348 409 <Ref> { Character } }
     }
@@ -11571,6 +12084,7 @@
       <Normal> { -0.066251 -0.130049 0.989292 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 340 371 393 <Ref> { Character } }
     }
@@ -11578,6 +12092,7 @@
       <Normal> { -0.532182 -0.837658 -0.122925 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 373 371 340 349 <Ref> { Character } }
     }
@@ -11585,6 +12100,7 @@
       <Normal> { -0.088925 0.095249 0.991474 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 407 353 393 <Ref> { Character } }
     }
@@ -11592,6 +12108,7 @@
       <Normal> { -0.927197 0.261659 0.26803 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 313 321 353 348 <Ref> { Character } }
     }
@@ -11599,6 +12116,7 @@
       <Normal> { -0.928509 0.333122 -0.164014 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 342 352 307 <Ref> { Character } }
     }
@@ -11606,6 +12124,7 @@
       <Normal> { -0.852646 -0.346564 0.391009 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 313 308 349 <Ref> { Character } }
     }
@@ -11613,6 +12132,7 @@
       <Normal> { 0.104484 0.946757 -0.304523 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 309 425 399 310 <Ref> { Character } }
     }
@@ -11620,6 +12140,7 @@
       <Normal> { 0.494163 0.868101 -0.046947 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 265 329 320 264 <Ref> { Character } }
     }
@@ -11627,6 +12148,7 @@
       <Normal> { -0.643456 -0.76542 -0.009812 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 263 207 204 259 <Ref> { Character } }
     }
@@ -11634,6 +12156,7 @@
       <Normal> { 0.914242 -0.384483 -0.127807 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 355 328 319 351 <Ref> { Character } }
     }
@@ -11641,6 +12164,7 @@
       <Normal> { 0.37993 -0.922238 -0.071629 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 328 263 259 319 <Ref> { Character } }
     }
@@ -11648,6 +12172,7 @@
       <Normal> { -0.537889 0.843015 -0.001171 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 198 265 264 195 <Ref> { Character } }
     }
@@ -11655,6 +12180,7 @@
       <Normal> { -0.965396 0.259545 0.025449 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 189 198 195 188 <Ref> { Character } }
     }
@@ -11662,6 +12188,7 @@
       <Normal> { 0.486055 0.868565 -0.096676 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 271 345 329 265 <Ref> { Character } }
     }
@@ -11669,6 +12196,7 @@
       <Normal> { -0.648178 -0.761486 0.002316 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 270 215 207 263 <Ref> { Character } }
     }
@@ -11676,6 +12204,7 @@
       <Normal> { 0.909994 -0.375337 -0.176159 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 362 344 328 355 <Ref> { Character } }
     }
@@ -11683,6 +12212,7 @@
       <Normal> { 0.375089 -0.920036 -0.113321 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 344 270 263 328 <Ref> { Character } }
     }
@@ -11690,6 +12220,7 @@
       <Normal> { -0.550591 0.83429 -0.028471 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 199 271 265 198 <Ref> { Character } }
     }
@@ -11697,6 +12228,7 @@
       <Normal> { -0.967586 0.247702 0.049202 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 190 199 198 189 <Ref> { Character } }
     }
@@ -11704,6 +12236,7 @@
       <Normal> { 0.34772 -0.93746 -0.016113 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 319 259 239 297 <Ref> { Character } }
     }
@@ -11711,6 +12244,7 @@
       <Normal> { -0.601018 0.799183 -0.009169 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 195 264 226 192 <Ref> { Character } }
     }
@@ -11718,6 +12252,7 @@
       <Normal> { -0.945989 0.324125 0.00683 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 188 195 192 187 <Ref> { Character } }
     }
@@ -11725,6 +12260,7 @@
       <Normal> { 0.376617 0.915774 -0.139708 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 310 399 345 271 <Ref> { Character } }
     }
@@ -11732,6 +12268,7 @@
       <Normal> { -0.958511 0.258775 0.119553 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 229 262 199 190 <Ref> { Character } }
     }
@@ -11739,6 +12276,7 @@
       <Normal> { 0.955875 -0.171221 -0.238718 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 396 389 344 362 <Ref> { Character } }
     }
@@ -11746,6 +12284,7 @@
       <Normal> { -0.491433 0.870502 0.026819 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 262 310 271 199 <Ref> { Character } }
     }
@@ -11753,6 +12292,7 @@
       <Normal> { -0.90496 -0.408145 0.120272 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 261 229 190 215 <Ref> { Character } }
     }
@@ -11760,6 +12300,7 @@
       <Normal> { -0.945264 -0.294027 0.141505 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 266 249 229 261 <Ref> { Character } }
     }
@@ -11767,6 +12308,7 @@
       <Normal> { 0.496533 0.864744 -0.075324 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 264 320 289 226 <Ref> { Character } }
     }
@@ -11774,6 +12316,7 @@
       <Normal> { 0.937085 0.331744 -0.108706 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 329 354 350 320 <Ref> { Character } }
     }
@@ -11781,6 +12324,7 @@
       <Normal> { -0.850547 -0.525711 0.01407 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 207 189 188 204 <Ref> { Character } }
     }
@@ -11788,6 +12332,7 @@
       <Normal> { 0.929734 0.324796 -0.173499 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 345 361 354 329 <Ref> { Character } }
     }
@@ -11795,6 +12340,7 @@
       <Normal> { -0.850027 -0.526518 0.015264 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 215 190 189 207 <Ref> { Character } }
     }
@@ -11802,6 +12348,7 @@
       <Normal> { 0.976353 -0.197099 -0.088803 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 351 319 297 299 <Ref> { Character } }
     }
@@ -11809,6 +12356,7 @@
       <Normal> { 0.920401 0.382232 -0.082222 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 320 350 298 289 <Ref> { Character } }
     }
@@ -11816,6 +12364,7 @@
       <Normal> { -0.978563 -0.198839 0.053648 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 204 188 187 185 <Ref> { Character } }
     }
@@ -11823,6 +12372,7 @@
       <Normal> { 0.956309 0.170075 -0.237796 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 399 395 361 345 <Ref> { Character } }
     }
@@ -11830,6 +12380,7 @@
       <Normal> { 0.026386 -0.212778 0.976744 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 380 317 330 370 <Ref> { Character } }
     }
@@ -11837,6 +12388,7 @@
       <Normal> { -0.699096 0.102281 0.707675 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 227 252 248 225 <Ref> { Character } }
     }
@@ -11844,6 +12396,7 @@
       <Normal> { -0.114211 -0.32747 0.937933 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 317 251 247 330 <Ref> { Character } }
     }
@@ -11851,6 +12404,7 @@
       <Normal> { -0.624777 -0.255149 0.737938 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 251 227 225 247 <Ref> { Character } }
     }
@@ -11858,6 +12412,7 @@
       <Normal> { -0.019813 0.247018 0.968808 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 318 418 426 331 <Ref> { Character } }
     }
@@ -11865,6 +12420,7 @@
       <Normal> { -0.192219 0.314028 0.929752 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 252 318 331 248 <Ref> { Character } }
     }
@@ -11872,6 +12428,7 @@
       <Normal> { 0.808307 -0.21306 0.548859 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 255 274 252 227 <Ref> { Character } }
     }
@@ -11879,6 +12436,7 @@
       <Normal> { 0.623069 0.631241 0.461865 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 324 272 251 317 <Ref> { Character } }
     }
@@ -11886,6 +12444,7 @@
       <Normal> { -0.006104 -0.967563 0.252555 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 326 413 418 318 <Ref> { Character } }
     }
@@ -11893,6 +12452,7 @@
       <Normal> { 0.168569 0.871004 0.46145 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 387 324 317 380 <Ref> { Character } }
     }
@@ -11900,6 +12460,7 @@
       <Normal> { 0.39757 -0.865569 0.304513 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 274 326 318 252 <Ref> { Character } }
     }
@@ -11907,6 +12468,7 @@
       <Normal> { 0.813608 0.145875 0.562817 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 272 255 227 251 <Ref> { Character } }
     }
@@ -11914,6 +12476,7 @@
       <Normal> { -0.07371 -0.422518 -0.903352 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 123 122 121 116 <Ref> { Character } }
     }
@@ -11921,6 +12484,7 @@
       <Normal> { -0.108641 0.317237 0.942103 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 129 130 109 107 <Ref> { Character } }
     }
@@ -11928,6 +12492,7 @@
       <Normal> { -0.100949 -0.795729 0.59718 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 126 128 105 111 <Ref> { Character } }
     }
@@ -11935,6 +12500,7 @@
       <Normal> { -0.049625 0.68932 -0.722756 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 127 125 119 113 <Ref> { Character } }
     }
@@ -11942,6 +12508,7 @@
       <Normal> { -0.058684 -0.597816 -0.799483 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 122 126 111 121 <Ref> { Character } }
     }
@@ -11949,6 +12516,7 @@
       <Normal> { -0.089274 0.938026 0.334869 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 130 127 113 109 <Ref> { Character } }
     }
@@ -11956,6 +12524,7 @@
       <Normal> { -0.071449 0.42259 -0.9035 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 125 124 117 119 <Ref> { Character } }
     }
@@ -11963,6 +12532,7 @@
       <Normal> { -0.105298 -0.317363 0.94244 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 128 129 107 105 <Ref> { Character } }
     }
@@ -11970,6 +12540,7 @@
       <Normal> { -0.697581 -0.101586 -0.709268 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 78 82 93 91 <Ref> { Character } }
     }
@@ -11977,6 +12548,7 @@
       <Normal> { -0.099766 -0.250041 -0.963082 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 102 100 91 93 <Ref> { Character } }
     }
@@ -11984,6 +12556,7 @@
       <Normal> { -0.140881 0.210995 0.967282 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 97 95 88 87 <Ref> { Character } }
     }
@@ -11991,6 +12564,7 @@
       <Normal> { -0.133264 -0.845867 0.516479 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 99 96 86 89 <Ref> { Character } }
     }
@@ -11998,6 +12572,7 @@
       <Normal> { -0.067357 0.737843 -0.671603 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 98 103 94 90 <Ref> { Character } }
     }
@@ -12005,6 +12580,7 @@
       <Normal> { -0.083758 -0.683065 -0.725539 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 100 99 89 91 <Ref> { Character } }
     }
@@ -12012,6 +12588,7 @@
       <Normal> { -0.115824 0.945014 0.305833 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 95 98 90 88 <Ref> { Character } }
     }
@@ -12019,6 +12596,7 @@
       <Normal> { -0.098023 0.250087 -0.963249 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 103 101 92 94 <Ref> { Character } }
     }
@@ -12026,6 +12604,7 @@
       <Normal> { -0.137993 -0.211094 0.967676 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 96 97 87 86 <Ref> { Character } }
     }
@@ -12033,6 +12612,7 @@
       <Normal> { 0.899682 -0.352122 0.258036 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 110 104 96 99 <Ref> { Character } }
     }
@@ -12040,6 +12620,7 @@
       <Normal> { 0.865121 -0.136892 0.482521 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 104 106 97 96 <Ref> { Character } }
     }
@@ -12047,6 +12628,7 @@
       <Normal> { 0.872817 0.133212 0.469516 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 106 108 95 97 <Ref> { Character } }
     }
@@ -12054,6 +12636,7 @@
       <Normal> { 0.908235 0.391024 0.149028 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 108 112 98 95 <Ref> { Character } }
     }
@@ -12061,6 +12644,7 @@
       <Normal> { 0.877672 0.352279 -0.324949 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 112 118 103 98 <Ref> { Character } }
     }
@@ -12068,6 +12652,7 @@
       <Normal> { 0.829897 0.192456 -0.523672 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 118 114 101 103 <Ref> { Character } }
     }
@@ -12075,6 +12660,7 @@
       <Normal> { 0.835409 -0.189583 -0.515898 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 115 120 100 102 <Ref> { Character } }
     }
@@ -12082,6 +12668,7 @@
       <Normal> { 0.880262 -0.311697 -0.357748 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 120 110 99 100 <Ref> { Character } }
     }
@@ -12089,6 +12676,7 @@
       <Normal> { 0.211095 -0.971399 -0.108731 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 389 314 270 344 <Ref> { Character } }
     }
@@ -12096,6 +12684,7 @@
       <Normal> { -0.656138 -0.751569 0.068025 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 314 261 215 270 <Ref> { Character } }
     }
@@ -12103,6 +12692,7 @@
       <Normal> { -0.506622 -0.861448 0.035219 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 259 204 185 239 <Ref> { Character } }
     }
@@ -12110,6 +12700,7 @@
       <Normal> { 0.061028 0.991446 0.115368 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 337 421 425 309 <Ref> { Character } }
     }
@@ -12117,6 +12708,7 @@
       <Normal> { -0.651804 -0.751345 0.103115 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 334 266 261 314 <Ref> { Character } }
     }
@@ -12124,6 +12716,7 @@
       <Normal> { -0.966324 0.22956 0.116277 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 249 268 262 229 <Ref> { Character } }
     }
@@ -12131,6 +12724,7 @@
       <Normal> { -0.510696 0.841102 0.178151 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 268 337 309 262 <Ref> { Character } }
     }
@@ -12138,6 +12732,7 @@
       <Normal> { -0.620336 0.770369 -0.147361 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 262 309 310 <Ref> { Character } }
     }
@@ -12145,6 +12740,7 @@
       <Normal> { -0.129938 -0.991522 -0.000409 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 381 334 314 383 <Ref> { Character } }
     }
@@ -12152,6 +12748,7 @@
       <Normal> { -0.426682 -0.752823 -0.501199 }
       <TRef> { Character_col }
       <TRef> { Character_ao }
+      <TRef> { Character_nm }
       <MRef> { Character }
       <VertexRef> { 383 314 389 <Ref> { Character } }
     }
