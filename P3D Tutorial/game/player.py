@@ -8,7 +8,10 @@ See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 # Panda3D imoprts
 from direct.actor.Actor import Actor
 from direct.fsm.FSM import FSM
-from panda3d.core import KeyboardButton
+from panda3d.core import (
+    CollisionSphere,
+    CollisionNode,
+    KeyboardButton)
 
 class Player(FSM):
     def __init__(self, charNr, controls):
@@ -48,6 +51,15 @@ class Player(FSM):
             self.kickLButton = KeyboardButton.asciiKey('k')
             self.kickRButton = KeyboardButton.asciiKey('l')
             self.defendButton = KeyboardButton.asciiKey('p')
+
+        self.getPos = self.character.getPos
+        self.getX = self.character.getX
+
+        playerSphere = CollisionSphere(0, 0, 0.8, 0.7)
+        playerColNode = CollisionNode("playerCollision")
+        playerColNode.addSolid(playerSphere)
+        self.playerCollision = self.player.attachNewNode(playerColNode)
+        base.pusher.addCollider(self.playerCollision, self.player)
 
     def attackAnimationPlaying(self):
         actionAnimations = [

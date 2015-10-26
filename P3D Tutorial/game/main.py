@@ -16,6 +16,8 @@ import logging
 from direct.showbase.ShowBase import ShowBase
 from direct.fsm.FSM import FSM
 from panda3d.core import (
+    CollisionTraverser,
+    CollisionHandlerPusher,
     AntialiasAttrib,
     ConfigPageManager,
     ConfigVariableBool,
@@ -134,6 +136,8 @@ class Main(ShowBase, FSM):
         #
         # initialize game content
         #
+        base.cTrav = CollisionTraverser("base collision traverser")
+        base.pusher = CollisionHandlerPusher()
         self.player = Player(1, "p1")
         self.player2 = Player(1, "p2")
 
@@ -156,6 +160,7 @@ class Main(ShowBase, FSM):
         # main game code should be called here
         self.player.start((-1, 8, -0.5))
         self.player2.start((1, 8, -0.5))
+        self.taskMgr.add(self.updateWorldCam, "world camera update task")
 
     def exitGame(self):
         # cleanup for game code
@@ -168,6 +173,27 @@ class Main(ShowBase, FSM):
     #
     # BASIC FUNCTIONS
     #
+
+    def updateWorldCam(self, task):
+        playerVec = self.player.getPos() - self.player2.getPos()
+        playerDist = playerVec.length()
+        x = self.player.getX() + playerDist / 2.0
+        self.camera.setX(x)
+
+        zoomout = False
+        if not self.cam.node().isInView(self.player.getPos(self.cam)):
+            camPosUpdate = -2 * globalClock.getDt()
+            self.camera.setY(self.camera, camPosUpdate)
+            zoomout = True
+        if not self.cam.node().isInView(self.player2.getPos(self.cam)):
+            camPosUpdate = -2 * globalClock.getDt()
+            self.camera.setY(self.camera, camPosUpdate)
+            zoomout = True
+        if not zoomout:
+            if self.camera.getY() < 0:
+                camPosUpdate = 2 * globalClock.getDt()
+                self.camera.setY(self.camera, camPosUpdate)
+        return task.cont
 
     def __escape(self):
         if self.state == "Game":
