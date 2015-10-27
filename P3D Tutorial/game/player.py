@@ -55,11 +55,14 @@ class Player(FSM):
         self.getPos = self.character.getPos
         self.getX = self.character.getX
 
-        playerSphere = CollisionSphere(0, 0, 0.8, 0.7)
-        playerColNode = CollisionNode("playerCollision")
-        playerColNode.addSolid(playerSphere)
-        self.playerCollision = self.player.attachNewNode(playerColNode)
-        base.pusher.addCollider(self.playerCollision, self.player)
+        characterSphere = CollisionSphere(0, 0, 1.0, 0.5)
+        characterColNode = CollisionNode("characterCollision")
+        characterColNode.addSolid(characterSphere)
+        self.characterCollision = self.character.attachNewNode(characterColNode)
+        # Uncomment this line to show collision solids
+        #self.characterCollision.show()
+        base.pusher.addCollider(self.characterCollision, self.character)
+        base.cTrav.addCollider(self.characterCollision, base.pusher)
 
     def attackAnimationPlaying(self):
         actionAnimations = [
@@ -70,6 +73,7 @@ class Player(FSM):
         if self.character.getCurrentAnim() in actionAnimations: return True
 
     def start(self, startPos):
+        print startPos
         self.character.setPos(startPos)
         self.character.show()
         self.request("Idle")

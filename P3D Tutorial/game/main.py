@@ -31,6 +31,7 @@ from panda3d.core import (
 
 # Game imports
 from player import Player
+from arena import Arena
 
 #
 # PATHS AND CONFIGS
@@ -141,6 +142,13 @@ class Main(ShowBase, FSM):
         self.player = Player(1, "p1")
         self.player2 = Player(1, "p2")
 
+        self.camera.setPos(0, -5, 1.25)
+        #self.camera.lookAt(0,0,1)
+
+        arena = loader.loadModel("levels/arena1/arena.egg")
+        arena.setScale(2)
+        arena.reparentTo(render)
+
         #
         # Event handling
         #
@@ -158,8 +166,10 @@ class Main(ShowBase, FSM):
 
     def enterGame(self):
         # main game code should be called here
-        self.player.start((-1, 8, -0.5))
-        self.player2.start((1, 8, -0.5))
+        self.arena = Arena(1)
+        self.arena.start()
+        self.player.start(self.arena.getStartPos(1))
+        self.player2.start(self.arena.getStartPos(2))
         self.taskMgr.add(self.updateWorldCam, "world camera update task")
 
     def exitGame(self):
@@ -190,7 +200,7 @@ class Main(ShowBase, FSM):
             self.camera.setY(self.camera, camPosUpdate)
             zoomout = True
         if not zoomout:
-            if self.camera.getY() < 0:
+            if self.camera.getY() < -5:
                 camPosUpdate = 2 * globalClock.getDt()
                 self.camera.setY(self.camera, camPosUpdate)
         return task.cont
