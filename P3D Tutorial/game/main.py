@@ -140,8 +140,10 @@ class Main(ShowBase, FSM):
         #
         base.cTrav = CollisionTraverser("base collision traverser")
         base.pusher = CollisionHandlerPusher()
-        self.player = Player(1, "p1")
-        self.player2 = Player(1, "p2")
+        self.player = Player(0, 1, "p1")
+        self.player2 = Player(1, 1, "p2")
+        self.player.setEnemy(self.player2.collisionNodeName)
+        self.player2.setEnemy(self.player.collisionNodeName)
         self.menu = Menu()
         self.menu.show()
 
@@ -179,7 +181,9 @@ class Main(ShowBase, FSM):
 
     def exitGame(self):
         # cleanup for game code
-        pass
+        self.player.stop()
+        self.player2.stop()
+        self.arena.stop()
 
     #
     # FSM PART END

@@ -6,16 +6,19 @@ See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 """
 
 # Panda3D imoprts
+from direct.showbase.DirectObject import DirectObject
 from direct.actor.Actor import Actor
 from direct.fsm.FSM import FSM
 from panda3d.core import (
+    CollisionSegment,
     CollisionSphere,
     CollisionNode,
     KeyboardButton)
 
-class Player(FSM):
-    def __init__(self, charNr, controls):
+class Player(FSM, DirectObject):
+    def __init__(self, charId, charNr, controls):
         FSM.__init__(self, "FSM-Player%d"%charNr)
+        self.charId = charId
         charPath = "characters/character%d/" % charNr
         self.character = Actor(
             charPath + "char", {
@@ -27,6 +30,7 @@ class Player(FSM):
                 "Kick_l":charPath + "kick_l",
                 "Kick_r":charPath + "kick_r",
                 "Defend":charPath + "defend",
+                "Hit":charPath + "hit",
                 "Defeated":charPath + "defeated"
             }
         )
@@ -56,7 +60,8 @@ class Player(FSM):
         self.getX = self.character.getX
 
         characterSphere = CollisionSphere(0, 0, 1.0, 0.5)
-        characterColNode = CollisionNode("characterCollision")
+        self.collisionNodeName = "character%dCollision"%charId
+        characterColNode = CollisionNode(self.collisionNodeName)
         characterColNode.addSolid(characterSphere)
         self.characterCollision = self.character.attachNewNode(characterColNode)
         # Uncomment this line to show collision solids
@@ -64,30 +69,72 @@ class Player(FSM):
         base.pusher.addCollider(self.characterCollision, self.character)
         base.cTrav.addCollider(self.characterCollision, base.pusher)
 
+        characterHitRay = CollisionSegment(0, -0.5, 1.0, 0, -0.8, 1.0)
+        characterColNode.addSolid(characterHitRay)
+
+    def setEnemy(self, enemyColName):
+        self.enemyColName = enemyColName
+        inEvent = "%s-into-%s"%(enemyColName,self.collisionNodeName)
+        base.pusher.addInPattern(inEvent)
+        self.accept(inEvent, self.setCanBeHit, [True])
+        outEvent = "%s-out-%s"%(enemyColName,self.collisionNodeName)
+        base.pusher.addOutPattern(outEvent)
+        self.accept(outEvent, self.setCanBeHit, [False])
+
+    def setCanBeHit(self, yes, collission):
+        eventName = "hitEnemy%s"%self.collisionNodeName
+        if yes:
+            self.accept(eventName, self.gotHit)
+        else:
+            self.ignore(eventName)
+        self.canBeHit = yes
+
+    def gotHit(self):
+        if not self.canBeHit or self.isDefending: return
+        self.health -= 10
+        if self.health <= 0:
+            self.gotDefeated = True
+            self.request("Defeated")
+        else:
+            self.request("Hit")
+
     def attackAnimationPlaying(self):
         actionAnimations = [
             "Punch_l",
             "Punch_r",
             "Kick_l",
-            "Kick_r"]
+            "Kick_r",
+            "Hit"]
         if self.character.getCurrentAnim() in actionAnimations: return True
 
     def start(self, startPos):
-        print startPos
         self.character.setPos(startPos)
         self.character.show()
         self.request("Idle")
-        taskMgr.add(self.moveTask, "move task")
+        self.canBeHit = False
+        self.isDefending = False
+        self.gotDefeated = False
+        self.health = 100
+        taskMgr.add(self.moveTask, "move task %d"%self.charId)
+
+    def stop(self):
+        self.character.hide()
+        taskMgr.remove("move task %d"%self.charId)
 
     def moveTask(self, task):
+        if self.gotDefeated:
+            base.messenger.send("GameOver")
+            return task.done
         if self.attackAnimationPlaying(): return task.cont
         speed = 0.0
         isDown = base.mouseWatcherNode.isButtonDown
 
         if isDown(self.defendButton):
             if self.state != "Defend":
+                self.isDefending = True
                 self.request("Defend")
             return task.cont
+        self.isDefending = False
 
         # Check for attack keys
         isAction = False
@@ -104,6 +151,7 @@ class Player(FSM):
             isAction = True
             self.request("Kick_r")
         if isAction:
+            base.messenger.send("hitEnemy%s"%self.enemyColName)
             return task.cont
 
         if isDown(self.leftButton):
@@ -159,6 +207,11 @@ class Player(FSM):
     def enterDefend(self):
         self.character.play("Defend")
     def exitDefend(self):
+        self.character.stop()
+
+    def enterHit(self):
+        self.character.play("Hit")
+    def exitHit(self):
         self.character.stop()
 
     def enterDefeated(self):
