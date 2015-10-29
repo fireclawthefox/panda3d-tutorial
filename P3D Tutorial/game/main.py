@@ -32,6 +32,7 @@ from panda3d.core import (
 # Game imports
 from player import Player
 from arena import Arena
+from menu import Menu
 
 #
 # PATHS AND CONFIGS
@@ -141,13 +142,8 @@ class Main(ShowBase, FSM):
         base.pusher = CollisionHandlerPusher()
         self.player = Player(1, "p1")
         self.player2 = Player(1, "p2")
-
-        self.camera.setPos(0, -5, 1.25)
-        #self.camera.lookAt(0,0,1)
-
-        arena = loader.loadModel("levels/arena1/arena.egg")
-        arena.setScale(2)
-        arena.reparentTo(render)
+        self.menu = Menu()
+        self.menu.show()
 
         #
         # Event handling
@@ -157,17 +153,26 @@ class Main(ShowBase, FSM):
         #
         # Start with the menu
         #
-        #TODO: Change this to any state you want the game to start with
-        self.request("Game")
+        self.request("Menu")
 
     #
     # FSM PART
     #
+    def enterMenu(self):
+        self.accept("Menu-Start", self.request, ["Game"])
+        self.accept("Menu-Quit", self.quit)
+        self.menu.show()
+
+    def exitMenu(self):
+        self.ignore("Menu-Start")
+        self.ignore("Menu-Quit")
+        self.menu.hide()
 
     def enterGame(self):
         # main game code should be called here
         self.arena = Arena(1)
         self.arena.start()
+        self.camera.setPos(0, -5, 1.25)
         self.player.start(self.arena.getStartPos(1))
         self.player2.start(self.arena.getStartPos(2))
         self.taskMgr.add(self.updateWorldCam, "world camera update task")
@@ -206,10 +211,10 @@ class Main(ShowBase, FSM):
         return task.cont
 
     def __escape(self):
-        if self.state == "Game":
+        if self.state == "Menu":
             self.quit()
         else:
-            self.request("Game")
+            self.request("Menu")
 
     def quit(self):
         """This function will stop the application"""
