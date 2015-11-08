@@ -33,13 +33,15 @@ from panda3d.core import (
 from player import Player
 from arena import Arena
 from menu import Menu
+from characterselection import CharacterSelection
+from hud import Hud
 
 #
 # PATHS AND CONFIGS
 #
 # set the application Name
-__builtin__.appName = "Game Name"
-__builtin__.versionstring = "15.10"
+__builtin__.appName = "Tatakai no ikimono"
+__builtin__.versionstring = "15.11"
 home = os.path.expanduser("~")
 __builtin__.basedir = os.path.join(home, __builtin__.appName)
 if not os.path.exists(__builtin__.basedir):
@@ -140,12 +142,10 @@ class Main(ShowBase, FSM):
         #
         base.cTrav = CollisionTraverser("base collision traverser")
         base.pusher = CollisionHandlerPusher()
-        self.player = Player(0, 1, "p1")
-        self.player2 = Player(1, 1, "p2")
-        self.player.setEnemy(self.player2.collisionNodeName)
-        self.player2.setEnemy(self.player.collisionNodeName)
         self.menu = Menu()
-        self.menu.show()
+        self.charSelection = CharacterSelection()
+        self.charSelection.show()
+        self.hud = Hud()
 
         #
         # Event handling
@@ -155,13 +155,13 @@ class Main(ShowBase, FSM):
         #
         # Start with the menu
         #
-        self.request("Menu")
+        self.request("CharSelection")
 
     #
     # FSM PART
     #
     def enterMenu(self):
-        self.accept("Menu-Start", self.request, ["Game"])
+        self.accept("Menu-Start", self.request, ["CharSelection"])
         self.accept("Menu-Quit", self.quit)
         self.menu.show()
 
@@ -170,20 +170,46 @@ class Main(ShowBase, FSM):
         self.ignore("Menu-Quit")
         self.menu.hide()
 
+    def enterCharSelection(self):
+        self.accept("CharSelection-Back", self.request, ["Menu"])
+        self.accept("CharSelection-Start", self.request, ["Game"])
+        self.charSelection.show()
+
+    def exitCharSelection(self):
+        self.ignore("CharSelection-Start")
+        self.charSelection.hide()
+        self.selectedChar1 = self.charSelection.selectedCharacter1
+        self.selectedChar2 = self.charSelection.selectedCharacter2
+
     def enterGame(self):
         # main game code should be called here
         self.arena = Arena(1)
         self.arena.start()
         self.camera.setPos(0, -5, 1.25)
+        self.player = Player(0, self.selectedChar1, "p1")
+        self.player2 = Player(1, self.selectedChar2, "p2")
+        self.player.setEnemy(self.player2.collisionNodeName)
+        self.player2.setEnemy(self.player.collisionNodeName)
         self.player.start(self.arena.getStartPos(1))
         self.player2.start(self.arena.getStartPos(2))
         self.taskMgr.add(self.updateWorldCam, "world camera update task")
+        self.hud.show()
+        def lifeChanged(charId, health):
+            base.messenger.send(
+                "hud_setLifeBarValue",
+                [charId, health])
+        self.accept("lifeChanged", lifeChanged)
 
     def exitGame(self):
         # cleanup for game code
+        self.taskMgr.remove("world camera update task")
         self.player.stop()
         self.player2.stop()
+        del self.player
+        del self.player2
         self.arena.stop()
+        self.hud.hide()
+        self.ignore("lifeChanged")
 
     #
     # FSM PART END
