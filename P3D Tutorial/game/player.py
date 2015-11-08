@@ -92,6 +92,9 @@ class Player(FSM, DirectObject):
     def gotHit(self):
         if not self.canBeHit or self.isDefending: return
         self.health -= 10
+        base.messenger.send(
+            "lifeChanged",
+            [self.charId, self.health])
         if self.health <= 0:
             self.gotDefeated = True
             self.request("Defeated")
@@ -118,7 +121,7 @@ class Player(FSM, DirectObject):
         taskMgr.add(self.moveTask, "move task %d"%self.charId)
 
     def stop(self):
-        self.character.hide()
+        self.character.removeNode()
         taskMgr.remove("move task %d"%self.charId)
 
     def moveTask(self, task):
