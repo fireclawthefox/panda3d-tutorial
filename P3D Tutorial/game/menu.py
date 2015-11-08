@@ -5,6 +5,7 @@ Simplified BSD (BSD 2-Clause) License.
 See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 """
 
+from panda3d.core import TextNode
 from direct.gui.DirectGui import (
     DirectFrame,
     DirectLabel,
@@ -14,23 +15,26 @@ class Menu:
     def __init__(self):
 
         self.frameMain = DirectFrame(
+            image = "assets/gui/MenuBackground.png",
+            image_scale = (1.7778, 1, 1),
             frameSize = (base.a2dLeft, base.a2dRight,
                          base.a2dTop, base.a2dBottom),
             frameColor = (0, 0, 0, 0))
         self.frameMain.setTransparency(1)
 
         self.title = DirectLabel(
-            scale = 0.25,
-            pos = (0.0, 0.0, base.a2dTop - 0.25),
+            scale = 0.15,
+            text_align = TextNode.ALeft,
+            pos = (base.a2dLeft + 0.2, 0, 0),
             frameColor = (0, 0, 0, 0),
-            text = "The Game",
+            text = "Main Menu",
             text_fg = (1,1,1,1))
         self.title.setTransparency(1)
         self.title.reparentTo(self.frameMain)
 
         self.btnStart = self.createButton(
             "Start",
-            .25,
+            -.10,
             ["Menu-Start"])
 
         self.btnExit = self.createButton(
@@ -41,12 +45,25 @@ class Menu:
         self.hide()
 
     def createButton(self, text, verticalPos, eventArgs):
+        maps = loader.loadModel("assets/gui/button_map.egg")
+        btnGeom = (maps.find("**/btn_ready"),
+                    maps.find("**/btn_click"),
+                    maps.find("**/btn_rollover"),
+                    maps.find("**/btn_disabled"))
         btn = DirectButton(
             text = text,
-            scale = 0.25,
-            pos = (0, 0, verticalPos),
+            text_fg = (0,0,0,1),
+            text_scale = 0.05,
+            text_pos = (0.02, -0.015),
+            text_align = TextNode.ALeft,
+            scale = 2,
+            pos = (base.a2dLeft + 0.2, 0, verticalPos),
+            geom = btnGeom,
+            relief = 0,
+            frameColor = (0,0,0,0),
             command = base.messenger.send,
             extraArgs = eventArgs,
+            pressEffect = False,
             rolloverSound = None,
             clickSound = None)
         btn.reparentTo(self.frameMain)

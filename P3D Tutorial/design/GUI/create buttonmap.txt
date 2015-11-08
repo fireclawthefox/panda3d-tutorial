@@ -1,0 +1,10 @@
+To create the button_map.egg file you need to call the following command that get
+installed with the Panda3D SDK. You must make sure, the png files given to it do
+exist and, as they are used for the main menu's buttons they should have all the
+same size of 800x40 px. The -g option will let us change the frames size, whereas
+the values to it were calculated using the actual pixel values for the aspect
+ratio and the frames size set to 1 unit in each direction multiplied with the
+aspect of the actual image. The -wm parameter was set to clamp so we don't get
+color bleeding from one side to another.
+
+egg-texture-cards -o button_map.egg -p 800,40 -g 0,1,-0.025,0.025 -wm clamp btn_ready.png btn_click.png btn_rollover.png btn_disabled.png
