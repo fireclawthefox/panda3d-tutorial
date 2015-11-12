@@ -13,7 +13,8 @@ from panda3d.core import (
     CollisionSegment,
     CollisionSphere,
     CollisionNode,
-    KeyboardButton)
+    KeyboardButton,
+    AudioSound)
 
 class Player(FSM, DirectObject):
     def __init__(self, charId, charNr, controls):
@@ -72,6 +73,14 @@ class Player(FSM, DirectObject):
         characterHitRay = CollisionSegment(0, -0.5, 1.0, 0, -0.8, 1.0)
         characterColNode.addSolid(characterHitRay)
 
+        self.audioStep = base.audio3d.loadSfx("assets/audio/step.egg")
+        self.audioStep.setLoop(True)
+        base.audio3d.attachSoundToObject(self.audioStep, self.character)
+
+        self.audioHit = base.audio3d.loadSfx("assets/audio/hit.egg")
+        self.audioHit.setLoop(True)
+        base.audio3d.attachSoundToObject(self.audioStep, self.character)
+
     def setEnemy(self, enemyColName):
         self.enemyColName = enemyColName
         inEvent = "%s-into-%s"%(enemyColName,self.collisionNodeName)
@@ -98,6 +107,7 @@ class Player(FSM, DirectObject):
         if self.health <= 0:
             self.gotDefeated = True
             self.request("Defeated")
+            base.messenger.send("gameOver", [self.charId])
         else:
             self.request("Hit")
 
@@ -121,8 +131,11 @@ class Player(FSM, DirectObject):
         taskMgr.add(self.moveTask, "move task %d"%self.charId)
 
     def stop(self):
-        self.character.removeNode()
         taskMgr.remove("move task %d"%self.charId)
+        base.audio3d.detachSound(self.audioStep)
+        base.audio3d.detachSound(self.audioHit)
+        self.character.cleanup()
+        self.character.removeNode()
 
     def moveTask(self, task):
         if self.gotDefeated:
@@ -179,13 +192,21 @@ class Player(FSM, DirectObject):
 
     def enterWalk(self):
         self.character.loop("Walk")
+        if self.audioStep.status() != AudioSound.PLAYING:
+            self.audioStep.play()
     def exitWalk(self):
         self.character.stop()
+        if self.audioStep.status() == AudioSound.PLAYING:
+            self.audioStep.stop()
 
     def enterWalk_back(self):
         self.character.loop("Walk_back")
+        if self.audioStep.status() != AudioSound.PLAYING:
+            self.audioStep.play()
     def exitWalk_back(self):
         self.character.stop()
+        if self.audioStep.status() == AudioSound.PLAYING:
+            self.audioStep.stop()
 
     def enterPunch_l(self):
         self.character.play("Punch_l")
@@ -214,6 +235,7 @@ class Player(FSM, DirectObject):
 
     def enterHit(self):
         self.character.play("Hit")
+        self.audioHit.play()
     def exitHit(self):
         self.character.stop()
 

@@ -8,7 +8,8 @@ See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 from panda3d.core import (
     AmbientLight,
     Spotlight,
-    PerspectiveLens)
+    PerspectiveLens,
+    Fog)
 
 class Arena:
     def __init__(self, arenaNr):
@@ -30,14 +31,25 @@ class Arena:
         self.sunNp.setPos(-10, 10, 30)
         self.sunNp.lookAt(0,0,0)
 
+        self.ambientSound = loader.loadSfx("assets/audio/ambientLevel1.ogg")
+        self.ambientSound.setLoop(True)
+
+        self.fog = Fog("Fog Name")
+        self.fog.setColor(0.3,0.3,0.5)
+        self.fog.setExpDensity(0.025)
+
     def start(self):
         self.arena.show()
         render.setLight(self.alnp)
         render.setLight(self.sunNp)
+        self.ambientSound.play()
+        render.setFog(self.fog)
 
     def stop(self):
         self.arena.hide()
         render.clearLight()
+        self.ambientSound.stop()
+        render.clearFog()
 
     def getStartPos(self, charNr):
         if charNr == 1:

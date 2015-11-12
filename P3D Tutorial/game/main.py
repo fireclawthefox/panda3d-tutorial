@@ -27,14 +27,19 @@ from panda3d.core import (
     loadPrcFile,
     MultiplexStream,
     Notify,
-    Filename)
+    Filename,
+    AudioSound)
+from direct.showbase.Audio3DManager import Audio3DManager
 
 # Game imports
 from player import Player
 from arena import Arena
 from menu import Menu
 from characterselection import CharacterSelection
+from levelselection import LevelSelection
+from koscreen import KoScreen
 from hud import Hud
+from helper import hide_cursor, show_cursor
 
 #
 # PATHS AND CONFIGS
@@ -57,6 +62,7 @@ loadPrcFileData("",
     #show-frame-rate-meter 1
     model-path $MAIN_DIR/assets/
     framebuffer-multisample 1
+    multisamples 8
     texture-anisotropic-degree 0
 """%__builtin__.appName)
 #
@@ -144,8 +150,14 @@ class Main(ShowBase, FSM):
         base.pusher = CollisionHandlerPusher()
         self.menu = Menu()
         self.charSelection = CharacterSelection()
-        self.charSelection.show()
+        self.levelSelection = LevelSelection()
+        self.koScreen = KoScreen()
         self.hud = Hud()
+        self.menuMusic = loader.loadMusic("assets/audio/menuMusic.ogg")
+        self.menuMusic.setLoop(True)
+        self.fightMusic = loader.loadMusic("assets/audio/fightMusic.ogg")
+        self.fightMusic.setLoop(True)
+        base.audio3d = Audio3DManager(base.sfxManagerList[0], camera)
 
         #
         # Event handling
@@ -155,15 +167,22 @@ class Main(ShowBase, FSM):
         #
         # Start with the menu
         #
-        self.request("CharSelection")
+        self.request("Menu")
 
     #
     # FSM PART
     #
     def enterMenu(self):
+        show_cursor()
         self.accept("Menu-Start", self.request, ["CharSelection"])
         self.accept("Menu-Quit", self.quit)
+        self.ignore("KoScreen-Back")
+        self.koScreen.hide()
         self.menu.show()
+        if self.menuMusic.status() != AudioSound.PLAYING:
+            self.menuMusic.play()
+        if self.fightMusic.status() == AudioSound.PLAYING:
+            self.fightMusic.stop()
 
     def exitMenu(self):
         self.ignore("Menu-Start")
@@ -172,18 +191,29 @@ class Main(ShowBase, FSM):
 
     def enterCharSelection(self):
         self.accept("CharSelection-Back", self.request, ["Menu"])
-        self.accept("CharSelection-Start", self.request, ["Game"])
+        self.accept("CharSelection-Start", self.request, ["LevelSelection"])
         self.charSelection.show()
 
     def exitCharSelection(self):
         self.ignore("CharSelection-Start")
+        self.ignore("CharSelection-Back")
         self.charSelection.hide()
         self.selectedChar1 = self.charSelection.selectedCharacter1
         self.selectedChar2 = self.charSelection.selectedCharacter2
 
+    def enterLevelSelection(self):
+        self.accept("LevelSelection-Back", self.request, ["CharSelection"])
+        self.accept("LevelSelection-Start", self.request, ["Game"])
+        self.levelSelection.show()
+
+    def exitLevelSelection(self):
+        self.ignore("LevelSelection-Start")
+        self.ignore("LevelSelection-Back")
+        self.levelSelection.hide()
+
     def enterGame(self):
         # main game code should be called here
-        self.arena = Arena(1)
+        self.arena = Arena(self.levelSelection.selectedLevel)
         self.arena.start()
         self.camera.setPos(0, -5, 1.25)
         self.player = Player(0, self.selectedChar1, "p1")
@@ -193,12 +223,18 @@ class Main(ShowBase, FSM):
         self.player.start(self.arena.getStartPos(1))
         self.player2.start(self.arena.getStartPos(2))
         self.taskMgr.add(self.updateWorldCam, "world camera update task")
+        self.accept("gameOver", self.gameOver)
         self.hud.show()
         def lifeChanged(charId, health):
             base.messenger.send(
                 "hud_setLifeBarValue",
                 [charId, health])
         self.accept("lifeChanged", lifeChanged)
+        hide_cursor()
+        if self.fightMusic.status() != AudioSound.PLAYING:
+            self.fightMusic.play()
+        if self.menuMusic.status() == AudioSound.PLAYING:
+            self.menuMusic.stop()
 
     def exitGame(self):
         # cleanup for game code
@@ -208,8 +244,8 @@ class Main(ShowBase, FSM):
         del self.player
         del self.player2
         self.arena.stop()
-        self.hud.hide()
         self.ignore("lifeChanged")
+        self.hud.hide()
 
     #
     # FSM PART END
@@ -218,6 +254,13 @@ class Main(ShowBase, FSM):
     #
     # BASIC FUNCTIONS
     #
+    def gameOver(self, LoosingCharId):
+        show_cursor()
+        winningChar = 1
+        if LoosingCharId == 0:
+            winningChar = 2
+        self.accept("KoScreen-Back", self.request, ["Menu"])
+        self.koScreen.show(winningChar)
 
     def updateWorldCam(self, task):
         playerVec = self.player.getPos() - self.player2.getPos()
@@ -243,6 +286,8 @@ class Main(ShowBase, FSM):
     def __escape(self):
         if self.state == "Menu":
             self.quit()
+        elif self.state == "LevelSelection":
+            self.request("CharSelection")
         else:
             self.request("Menu")
 
