@@ -1,0 +1,13 @@
+To create x11 cursor files create a cursor configuration file.
+This file should contain the following:
+
+dimension pointer-position-x pointer-position-y image-filename
+e.g.:
+32 1 1 Cursor.png
+
+then call this command to create a x11 cursor named cursor.x11
+xcursorgen Cursor.conf ./Cursor.x11
+
+On windows systmems you can simply use the ico file format. Though with that
+you'll be limited as you can't set the pointer possition. To get more control
+you have to use windows cursor (cur or ani) files.
