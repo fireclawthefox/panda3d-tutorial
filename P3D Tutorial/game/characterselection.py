@@ -132,6 +132,8 @@ class CharacterSelection:
         self.btnStart.reparentTo(self.footerFrame)
         self.btnStart["state"] = DGG.DISABLED
 
+        self.hide()
+
     def createCharacterButton(self, pos, image, charNr):
         btn = DirectButton(
             scale = 0.1,
