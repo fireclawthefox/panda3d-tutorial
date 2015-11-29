@@ -7,8 +7,8 @@ See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 
 from panda3d.core import (
     AmbientLight,
-    Spotlight,
     PerspectiveLens,
+    DirectionalLight,
     Fog)
 from direct.particles.ParticleEffect import ParticleEffect
 
@@ -20,16 +20,21 @@ class Arena:
         self.arena.reparentTo(render)
         self.arena.hide()
 
-        ambientLight = AmbientLight('ambient_light')
+        ambientLight = AmbientLight("ambient_light")
         ambientLight.setColor((0.2, 0.2, 0.2, 1))
         self.alnp = render.attachNewNode(ambientLight)
 
-        sun = Spotlight('sun')
+        sun = DirectionalLight("sun")
         sun.setColor((1, 1, 1, 1))
         sunLens = PerspectiveLens()
+        sunLens.setFilmSize(50)
+        sunLens.setNearFar(25,45)
         sun.setLens(sunLens)
+        sun.setShadowCaster(True, 512, 512)
+        sun.setScene(render)
+        #sun.showFrustum()
         self.sunNp = render.attachNewNode(sun)
-        self.sunNp.setPos(-10, 10, 30)
+        self.sunNp.setPos(-10, -10, 30)
         self.sunNp.lookAt(0,0,0)
 
         self.ambientSound = loader.loadSfx("assets/audio/ambientLevel1.ogg")

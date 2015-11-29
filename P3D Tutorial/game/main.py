@@ -110,6 +110,8 @@ class Main(ShowBase, FSM):
         self.setBackgroundColor(0, 0, 0)
         # set antialias for the complete sceen to automatic
         self.render.setAntialias(AntialiasAttrib.MAuto)
+        # shader generator
+        render.setShaderAuto()
 
         #
         # CONFIGURATION LOADING
