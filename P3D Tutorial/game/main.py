@@ -35,6 +35,7 @@ from direct.showbase.Audio3DManager import Audio3DManager
 from player import Player
 from arena import Arena
 from menu import Menu
+from credits import Credits
 from characterselection import CharacterSelection
 from levelselection import LevelSelection
 from koscreen import KoScreen
@@ -149,6 +150,7 @@ class Main(ShowBase, FSM):
         base.cTrav = CollisionTraverser("base collision traverser")
         base.pusher = CollisionHandlerPusher()
         self.menu = Menu()
+        self.credits = Credits()
         self.charSelection = CharacterSelection()
         self.levelSelection = LevelSelection()
         self.koScreen = KoScreen()
@@ -175,6 +177,7 @@ class Main(ShowBase, FSM):
     def enterMenu(self):
         show_cursor()
         self.accept("Menu-Start", self.request, ["CharSelection"])
+        self.accept("Menu-Credits", self.request, ["Credits"])
         self.accept("Menu-Quit", self.quit)
         self.ignore("KoScreen-Back")
         self.koScreen.hide()
@@ -186,8 +189,17 @@ class Main(ShowBase, FSM):
 
     def exitMenu(self):
         self.ignore("Menu-Start")
+        self.ignore("Menu-Credits")
         self.ignore("Menu-Quit")
         self.menu.hide()
+
+    def enterCredits(self):
+        self.accept("Credits-Back", self.request, ["Menu"])
+        self.credits.show()
+
+    def exitCredits(self):
+        self.ignore("Credits-Back")
+        self.credits.hide()
 
     def enterCharSelection(self):
         self.accept("CharSelection-Back", self.request, ["Menu"])

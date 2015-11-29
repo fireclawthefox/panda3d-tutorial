@@ -15,6 +15,7 @@ from panda3d.core import (
     CollisionNode,
     KeyboardButton,
     AudioSound)
+from direct.particles.ParticleEffect import ParticleEffect
 
 class Player(FSM, DirectObject):
     def __init__(self, charId, charNr, controls):
@@ -100,6 +101,18 @@ class Player(FSM, DirectObject):
 
     def gotHit(self):
         if not self.canBeHit or self.isDefending: return
+
+        self.bloodsplat = ParticleEffect()
+        self.bloodsplat.loadConfig("assets/fx/BloodSplat.ptf")
+        floater = self.character.attachNewNode("particleFloater")
+        if self.character.getH() == 90:
+            floater.setPos(-1, 0, 1)
+        if self.character.getH() == -90:
+            floater.setPos(1, 0, 1)
+        self.bloodsplat.start(parent = floater, renderParent = render)
+        taskMgr.doMethodLater(0.5, self.bloodsplat.cleanup,
+            "stop Particle", extraArgs = [])
+
         self.health -= 10
         base.messenger.send(
             "lifeChanged",

@@ -10,6 +10,7 @@ from panda3d.core import (
     Spotlight,
     PerspectiveLens,
     Fog)
+from direct.particles.ParticleEffect import ParticleEffect
 
 class Arena:
     def __init__(self, arenaNr):
@@ -38,6 +39,12 @@ class Arena:
         self.fog.setColor(0.3,0.3,0.5)
         self.fog.setExpDensity(0.025)
 
+        self.levelParticles = None
+        if arenaNr == 1:
+            self.levelParticles = ParticleEffect()
+            self.levelParticles.loadConfig("assets/fx/Leafs.ptf")
+            self.levelParticles.start(parent = render2d, renderParent = render2d)
+
     def start(self):
         self.arena.show()
         render.setLight(self.alnp)
@@ -50,6 +57,8 @@ class Arena:
         render.clearLight()
         self.ambientSound.stop()
         render.clearFog()
+        if self.levelParticles != None:
+            self.levelParticles.cleanup()
 
     def getStartPos(self, charNr):
         if charNr == 1:

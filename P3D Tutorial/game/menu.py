@@ -37,9 +37,14 @@ class Menu:
             -.10,
             ["Menu-Start"])
 
+        self.btnStart = self.createButton(
+            "Credits",
+            -.25,
+            ["Menu-Credits"])
+
         self.btnExit = self.createButton(
            "Quit",
-            -.25,
+            -.40,
             ["Menu-Quit"])
 
         self.hide()
