@@ -30,7 +30,7 @@ class Arena:
         sunLens.setFilmSize(50)
         sunLens.setNearFar(25,45)
         sun.setLens(sunLens)
-        sun.setShadowCaster(True, 512, 512)
+        sun.setShadowCaster(True, 2048, 2048)
         sun.setScene(render)
         #sun.showFrustum()
         self.sunNp = render.attachNewNode(sun)
