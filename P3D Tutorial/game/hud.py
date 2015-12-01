@@ -48,6 +48,8 @@ class Hud(DirectObject):
         self.hide()
 
     def show(self):
+        self.lifeBar1["value"] = 100
+        self.lifeBar2["value"] = 100
         self.lifeBar1.show()
         self.lifeBar2.show()
 
