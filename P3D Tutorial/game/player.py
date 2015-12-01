@@ -74,12 +74,12 @@ class Player(FSM, DirectObject):
         characterHitRay = CollisionSegment(0, -0.5, 1.0, 0, -0.8, 1.0)
         characterColNode.addSolid(characterHitRay)
 
-        self.audioStep = base.audio3d.loadSfx("assets/audio/step.egg")
+        self.audioStep = base.audio3d.loadSfx("assets/audio/step.ogg")
         self.audioStep.setLoop(True)
         base.audio3d.attachSoundToObject(self.audioStep, self.character)
 
-        self.audioHit = base.audio3d.loadSfx("assets/audio/hit.egg")
-        self.audioHit.setLoop(True)
+        self.audioHit = base.audio3d.loadSfx("assets/audio/hit.ogg")
+        self.audioHit.setLoop(False)
         base.audio3d.attachSoundToObject(self.audioStep, self.character)
 
     def setEnemy(self, enemyColName):
