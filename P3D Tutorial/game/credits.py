@@ -14,6 +14,7 @@ from direct.gui.DirectGui import (
     DirectLabel,
     DirectButton)
 from direct.stdpy.file import open
+from direct.interval.LerpInterval import LerpPosInterval
 
 class Credits:
     def __init__(self):
@@ -49,6 +50,13 @@ class Credits:
         self.lblCredits.setTransparency(1)
         self.lblCredits.reparentTo(self.frameMain)
 
+        self.creditsScroll = LerpPosInterval(
+            self.lblCredits,
+            12.0,
+            (0, 0, base.a2dTop + 3.5),
+            startPos=(0, 0, base.a2dBottom),
+            name="CreditsScroll")
+
         self.btnBack = DirectButton(
             text = "BACK",
             text_fg = (1,1,1,1),
@@ -75,6 +83,8 @@ class Credits:
 
     def show(self):
         self.frameMain.show()
+        self.creditsScroll.loop()
 
     def hide(self):
         self.frameMain.hide()
+        self.creditsScroll.finish()

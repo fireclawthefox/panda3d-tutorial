@@ -10,7 +10,32 @@
 smallFireclaw the Fox
 
 us:Music:
-small...
+smallNiji Wo Koete - Metal Version
+by
+Butterfly Tea
+Licensed: CC-BY-SA
+
+Cavern of Time
+by
+Buterfly Tea
+Licensed: CC-BY-SA
+
+
+us:Soundeffects:
+smallpunch
+by
+Ekokubza123
+Licensed: CC-0
+
+step
+by
+dav0r
+Licensed: CC-0
+
+Level 1 Ambient
+by
+volivieri
+Licensed: CC-BY
 
 us:Special thanks to:
 smallPanda3D Community and the Panda3D Developers

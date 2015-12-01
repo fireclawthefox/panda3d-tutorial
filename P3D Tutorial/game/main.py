@@ -46,10 +46,14 @@ from helper import hide_cursor, show_cursor
 # PATHS AND CONFIGS
 #
 # set the application Name
+__builtin__.companyName = "Grimfang Studios"
 __builtin__.appName = "Tatakai no ikimono"
 __builtin__.versionstring = "15.11"
 home = os.path.expanduser("~")
-__builtin__.basedir = os.path.join(home, __builtin__.appName)
+__builtin__.basedir = os.path.join(
+    home,
+    __builtin__.companyName,
+    __builtin__.appName)
 if not os.path.exists(__builtin__.basedir):
     os.makedirs(__builtin__.basedir)
 prcFile = os.path.join(__builtin__.basedir, "%s.prc"%__builtin__.appName)
@@ -197,6 +201,7 @@ class Main(ShowBase, FSM):
 
     def enterCredits(self):
         self.accept("Credits-Back", self.request, ["Menu"])
+        self.koScreen.hide()
         self.credits.show()
 
     def exitCredits(self):
@@ -273,7 +278,7 @@ class Main(ShowBase, FSM):
         winningChar = 1
         if LoosingCharId == 0:
             winningChar = 2
-        self.accept("KoScreen-Back", self.request, ["Menu"])
+        self.accept("KoScreen-Back", self.request, ["Credits"])
         self.koScreen.show(winningChar)
 
     def updateWorldCam(self, task):
