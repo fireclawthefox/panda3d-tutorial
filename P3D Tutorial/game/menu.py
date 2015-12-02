@@ -50,7 +50,7 @@ class Menu:
         self.hide()
 
     def createButton(self, text, verticalPos, eventArgs):
-        maps = loader.loadModel("assets/gui/button_map.egg")
+        maps = loader.loadModel("assets/gui/button_map")
         btnGeom = (maps.find("**/btn_ready"),
                     maps.find("**/btn_click"),
                     maps.find("**/btn_rollover"),
