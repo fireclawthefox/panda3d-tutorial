@@ -48,7 +48,7 @@ from helper import hide_cursor, show_cursor
 # set the application Name
 __builtin__.companyName = "Grimfang Studios"
 __builtin__.appName = "Tatakai no ikimono"
-__builtin__.versionstring = "15.11"
+__builtin__.versionstring = "15.12"
 home = os.path.expanduser("~")
 __builtin__.basedir = os.path.join(
     home,
