@@ -145,6 +145,7 @@ class Player(FSM, DirectObject):
 
     def stop(self):
         taskMgr.remove("move task %d"%self.charId)
+        self.ignoreAll()
         base.audio3d.detachSound(self.audioStep)
         base.audio3d.detachSound(self.audioHit)
         self.character.cleanup()
