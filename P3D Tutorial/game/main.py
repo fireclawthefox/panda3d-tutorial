@@ -8,11 +8,9 @@ See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 # Python imports
 import __builtin__
 import os
-import atexit
 import logging
 
 # Panda3D imoprts
-#from pandac.PandaModules import loadPrcFileData
 from direct.showbase.ShowBase import ShowBase
 from direct.fsm.FSM import FSM
 from panda3d.core import (
@@ -58,7 +56,7 @@ if not os.path.exists(__builtin__.basedir):
     os.makedirs(__builtin__.basedir)
 prcFile = os.path.join(__builtin__.basedir, "%s.prc"%__builtin__.appName)
 if os.path.exists(prcFile):
-    loadPrcFile(Filename.fromOsSpecific(prcFile))
+    mainConfig = loadPrcFile(Filename.fromOsSpecific(prcFile))
 loadPrcFileData("",
 """
     window-title %s
@@ -147,9 +145,48 @@ class Main(ShowBase, FSM):
             props.setSize(w, h)
             # request the new properties
             base.win.requestProperties(props)
-        # automatically safe configuration at application exit
-        atexit.register(self.__writeConfig)
+        elif base.appRunner:
+            # As when the application is started as appRunner instance
+            # it doesn't respect our loadPrcFile configurations specific
+            # to the window, hence we need to manually set them here.
+            for dec in range(mainConfig.getNumDeclarations()):
+                #TODO: Check for all window specific variables like
+                #      fullscreen, screen size, title and window
+                #      decoration that you have in your configuration
+                #      and set them by your own.
+                if mainConfig.getVariableName(dec) == "fullscreen":
+                    if not mainConfig.getDeclaration(dec).getBoolWord(0): break
+                    # get the displays width and height
+                    w = self.pipe.getDisplayWidth()
+                    h = self.pipe.getDisplayHeight()
+                    # set window properties
+                    # clear all properties not previously set
+                    base.win.clearRejectedProperties()
+                    # setup new window properties
+                    props = WindowProperties()
+                    # Fullscreen
+                    props.setFullscreen(True)
+                    # set the window size to the screen resolution
+                    props.setSize(w, h)
+                    # request the new properties
+                    base.win.requestProperties(props)
+                    break
 
+        # automatically safe configuration at application exit
+        base.exitFunc = self.__writeConfig
+
+        # due to the delayed window resizing and switch to fullscreen
+        # we wait some time until everything is set so we can savely
+        # proceed with other setups like the menus
+        if base.appRunner:
+            # this behaviour only happens if run from p3d files and
+            # hence the appRunner is enabled
+            taskMgr.doMethodLater(0.5, self.postInit,
+                "post initialization", extraArgs=[])
+        else:
+            self.postInit()
+
+    def postInit(self):
         #
         # initialize game content
         #
@@ -263,6 +300,7 @@ class Main(ShowBase, FSM):
         del self.player
         del self.player2
         self.arena.stop()
+        self.ignore("gameOver")
         self.ignore("lifeChanged")
         self.hud.hide()
 
@@ -312,10 +350,7 @@ class Main(ShowBase, FSM):
 
     def quit(self):
         """This function will stop the application"""
-        if self.appRunner:
-            self.appRunner.stop()
-        else:
-            exit(0)
+        self.userExit()
 
     def __writeConfig(self):
         """Save current config in the prc file or if no prc file exists
