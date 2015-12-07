@@ -24,43 +24,58 @@ class Arena:
         ambientLight.setColor((0.2, 0.2, 0.2, 1))
         self.alnp = render.attachNewNode(ambientLight)
 
-        sun = DirectionalLight("sun")
-        sun.setColor((1, 1, 1, 1))
         sunLens = PerspectiveLens()
         sunLens.setFilmSize(50)
-        sunLens.setNearFar(25,45)
-        sun.setLens(sunLens)
+        sun = DirectionalLight("sun")
+        sun.setColor((1, 1, 1, 1))
         sun.setShadowCaster(True, 2048, 2048)
         sun.setScene(render)
         #sun.showFrustum()
-        self.sunNp = render.attachNewNode(sun)
-        self.sunNp.setPos(-10, -10, 30)
-        self.sunNp.lookAt(0,0,0)
 
-        self.ambientSound = loader.loadSfx("assets/audio/ambientLevel1.ogg")
-        self.ambientSound.setLoop(True)
-
-        self.fog = Fog("Fog Name")
-        self.fog.setColor(0.3,0.3,0.5)
-        self.fog.setExpDensity(0.025)
-
+        self.ambientSound = None
         self.levelParticles = None
         if arenaNr == 1:
+            sunLens.setNearFar(25,45)
+            sun.setLens(sunLens)
+            self.sunNp = render.attachNewNode(sun)
+            self.sunNp.setPos(-10, -10, 30)
+            self.sunNp.lookAt(0,0,0)
+
+            self.ambientSound = loader.loadSfx("assets/audio/ambientLevel1.ogg")
+            self.ambientSound.setLoop(True)
+
+            self.fog = Fog("Outside Fog")
+            self.fog.setColor(0.3,0.3,0.5)
+            self.fog.setExpDensity(0.025)
+
             self.levelParticles = ParticleEffect()
             self.levelParticles.loadConfig("assets/fx/Leafs.ptf")
             self.levelParticles.start(parent = render2d, renderParent = render2d)
+        elif arenaNr == 2:
+            sunLens.setFov(120, 40)
+            sunLens.setNearFar(2,10)
+            sun.setLens(sunLens)
+            self.sunNp = render.attachNewNode(sun)
+            self.sunNp.setPos(0, 0, 5)
+            self.sunNp.lookAt(0,0,0)
+
+            self.fog = Fog("Temple Fog")
+            self.fog.setColor(0,0,0)
+            self.fog.setExpDensity(0.065)
 
     def start(self):
         self.arena.show()
         render.setLight(self.alnp)
         render.setLight(self.sunNp)
-        self.ambientSound.play()
+        if self.ambientSound != None:
+            self.ambientSound.play()
         render.setFog(self.fog)
 
     def stop(self):
         self.arena.hide()
         render.clearLight()
-        self.ambientSound.stop()
+        if self.ambientSound != None:
+            self.ambientSound.stop()
         render.clearFog()
         if self.levelParticles != None:
             self.levelParticles.cleanup()

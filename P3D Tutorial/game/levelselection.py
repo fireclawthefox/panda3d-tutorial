@@ -22,13 +22,13 @@ class LevelSelection:
         self.btnLevel1 = self.createLevelButton(
             (-0.6, 0, 0.15),
             "assets/gui/Level1Button.png",
-            0)
+            1)
         self.btnLevel1.reparentTo(self.frameMain)
 
         self.btnLevel2 = self.createLevelButton(
             (0.6, 0, 0.15),
             "assets/gui/Level2Button.png",
-            1)
+            2)
         self.btnLevel2.reparentTo(self.frameMain)
 
         self.footerFrame = DirectFrame(
@@ -68,19 +68,22 @@ class LevelSelection:
         self.hide()
 
     def createLevelButton(self, pos, image, levelNr):
-        self.selectedLevel = levelNr
         btn = DirectButton(
             scale = (0.5, 1, 0.75),
             relief = 0,
             frameColor = (0,0,0,0),
             pos = pos,
             image = image,
-            command = base.messenger.send,
-            extraArgs = ["LevelSelection-Start"],
+            command = self.selectLevel,
+            extraArgs = [levelNr],
             rolloverSound = None,
             clickSound = None)
         btn.setTransparency(1)
         return btn
+
+    def selectLevel(self, level):
+        self.selectedLevel = level
+        base.messenger.send("LevelSelection-Start")
 
     def show(self):
         self.frameMain.show()
