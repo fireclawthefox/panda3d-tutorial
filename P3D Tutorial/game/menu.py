@@ -15,7 +15,7 @@ class Menu:
     def __init__(self):
 
         self.frameMain = DirectFrame(
-            image = "assets/gui/MenuBackground.png",
+            image = "gui/MenuBackground.png",
             image_scale = (1.7778, 1, 1),
             frameSize = (base.a2dLeft, base.a2dRight,
                          base.a2dTop, base.a2dBottom),
@@ -50,7 +50,7 @@ class Menu:
         self.hide()
 
     def createButton(self, text, verticalPos, eventArgs):
-        maps = loader.loadModel("assets/gui/button_map")
+        maps = loader.loadModel("gui/button_map")
         btnGeom = (maps.find("**/btn_ready"),
                     maps.find("**/btn_click"),
                     maps.find("**/btn_rollover"),
