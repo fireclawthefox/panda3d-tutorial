@@ -9,3 +9,8 @@ This book is mainly intended for beginners who want to learn game development wi
 
 
 current state: First review cycle (partly WIP)
+
+Notes for writers:
+The code highlighting in this book is created with http://extensions.libreoffice.org/extension-center/code-colorizer-formatter
+Note, set Font Name to Liberation Mono in it's configuration.
+

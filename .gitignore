@@ -6,3 +6,7 @@
 
 # Rope
 .ropeproject
+
+# Backups
+*~
+*.blend[0-9]
