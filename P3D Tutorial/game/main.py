@@ -27,6 +27,7 @@ from panda3d.core import (
     Notify,
     Filename,
     AudioSound)
+from direct.gui.DirectGui import DGG
 from direct.showbase.Audio3DManager import Audio3DManager
 
 # Game imports
@@ -67,6 +68,7 @@ loadPrcFileData("",
     framebuffer-multisample 1
     multisamples 8
     texture-anisotropic-degree 0
+    textures-auto-power-2 1
 """%__builtin__.appName)
 #
 # PATHS AND CONFIGS END
@@ -114,6 +116,8 @@ class Main(ShowBase, FSM):
         self.render.setAntialias(AntialiasAttrib.MAuto)
         # shader generator
         render.setShaderAuto()
+        # Enhance font readability
+        DGG.getDefaultFont().setPixelsPerUnit(100)
 
         #
         # CONFIGURATION LOADING
