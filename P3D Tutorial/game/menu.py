@@ -18,7 +18,7 @@ class Menu:
             image = "gui/MenuBackground.png",
             image_scale = (1.7778, 1, 1),
             frameSize = (base.a2dLeft, base.a2dRight,
-                         base.a2dTop, base.a2dBottom),
+                         base.a2dBottom, base.a2dTop),
             frameColor = (0, 0, 0, 0))
         self.frameMain.setTransparency(1)
 

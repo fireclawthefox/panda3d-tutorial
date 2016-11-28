@@ -24,7 +24,7 @@ class Hud(DirectObject):
             borderWidth = (0.01, 0.01),
             relief = DGG.RIDGE,
             frameColor = (0.8,0.05,0.10,1),
-            frameSize = (-1.2, 0, -0.1, 0),
+            frameSize = (-1.2, 0, 0, -0.1),
             pos = (-0.2,0,base.a2dTop-0.15))
         self.lifeBar1.setTransparency(1)
 
@@ -40,7 +40,7 @@ class Hud(DirectObject):
             borderWidth = (0.01, 0.01),
             relief = DGG.RIDGE,
             frameColor = (0.8,0.05,0.10,1),
-            frameSize = (0, 1.2, -0.1, 0),
+            frameSize = (0, 1.2, 0, -0.1),
             pos = (0.2,0,base.a2dTop-0.15))
         self.lifeBar2.setTransparency(1)
 

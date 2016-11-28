@@ -16,7 +16,7 @@ class KoScreen(DirectObject):
     def __init__(self):
         self.frameMain = DirectFrame(
             frameSize = (base.a2dLeft, base.a2dRight,
-                         base.a2dTop, base.a2dBottom),
+                         base.a2dBottom, base.a2dTop),
             frameColor = (0, 0, 0, 0.75))
         self.frameMain.setTransparency(1)
 

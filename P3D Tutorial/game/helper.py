@@ -14,7 +14,7 @@ import sys
 #
 # PANDA3D ENGINE IMPORTS
 #
-from pandac.PandaModules import WindowProperties
+from panda3d.core import WindowProperties
 
 def hide_cursor():
     """set the Cursor invisible"""

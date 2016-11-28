@@ -15,7 +15,7 @@ class LevelSelection:
 
         self.frameMain = DirectFrame(
             frameSize = (base.a2dLeft, base.a2dRight,
-                         base.a2dTop, base.a2dBottom),
+                         base.a2dBottom, base.a2dTop),
             frameColor = (0.05, 0.05, 0.05, 1))
         self.frameMain.setTransparency(1)
 
@@ -37,7 +37,7 @@ class LevelSelection:
             text_scale = 0.08,
             text_pos = (0, -0.03),
             frameSize = (base.a2dLeft, base.a2dRight,
-                         -0.1, 0.1),
+                         0.1, -0.1),
             pos = (0, 0, base.a2dBottom + 0.2),
             frameColor = (0, 0, 0, 0.5))
         self.footerFrame.setTransparency(1)

@@ -21,7 +21,7 @@ class Credits:
 
         self.frameMain = DirectFrame(
             frameSize = (base.a2dLeft, base.a2dRight,
-                         base.a2dTop, base.a2dBottom),
+                         base.a2dBottom, base.a2dTop),
             frameColor = (0.05, 0.05, 0.05, 1))
         self.frameMain.setTransparency(1)
 
