@@ -6,7 +6,6 @@ See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 """
 
 # Python imports
-import __builtin__
 import os
 import logging
 
@@ -45,17 +44,17 @@ from helper import hide_cursor, show_cursor
 # PATHS AND CONFIGS
 #
 # set the application Name
-__builtin__.companyName = "Grimfang Studios"
-__builtin__.appName = "Tatakai no ikimono"
-__builtin__.versionstring = "16.12"
+companyName = "Grimfang Studio"
+appName = "Tatakai no ikimono"
+versionstring = "16.12"
 home = os.path.expanduser("~")
-__builtin__.basedir = os.path.join(
+basedir = os.path.join(
     home,
-    __builtin__.companyName,
-    __builtin__.appName)
-if not os.path.exists(__builtin__.basedir):
-    os.makedirs(__builtin__.basedir)
-prcFile = os.path.join(__builtin__.basedir, "{}.prc".format(__builtin__.appName))
+    companyName,
+    appName)
+if not os.path.exists(basedir):
+    os.makedirs(basedir)
+prcFile = os.path.join(basedir, "{}.prc".format(appName))
 if os.path.exists(prcFile):
     mainConfig = loadPrcFile(Filename.fromOsSpecific(prcFile))
 loadPrcFileData("",
@@ -69,7 +68,7 @@ loadPrcFileData("",
     multisamples 8
     texture-anisotropic-degree 0
     textures-auto-power-2 1
-""".format(__builtin__.appName))
+""".format(appName))
 #
 # PATHS AND CONFIGS END
 #
@@ -81,17 +80,17 @@ loadPrcFileData("",
 logging.basicConfig(
     level=logging.DEBUG,
     format="%(asctime)s %(levelname)s: %(message)s",
-    filename=os.path.join(__builtin__.basedir, "game.log"),
+    filename=os.path.join(basedir, "game.log"),
     datefmt="%d-%m-%Y %H:%M:%S",
     filemode="w")
 
 # First log entry, the program version
-logging.info("Version {}".format(__builtin__.versionstring))
+logging.info("Version {}".format(versionstring))
 
 # redirect the notify output to a log file
 nout = MultiplexStream()
 Notify.ptr().setOstreamPtr(nout, 0)
-nout.addFile(Filename(os.path.join(__builtin__.basedir, "game_p3d.log")))
+nout.addFile(Filename(os.path.join(basedir, "game_p3d.log")))
 #
 # LOGGING END
 #
