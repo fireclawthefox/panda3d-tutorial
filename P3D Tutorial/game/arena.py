@@ -14,7 +14,7 @@ from direct.particles.ParticleEffect import ParticleEffect
 
 class Arena:
     def __init__(self, arenaNr):
-        arenaPath = "levels/arena%d/" % arenaNr
+        arenaPath = "levels/arena{}/".format(arenaNr)
         self.arena = loader.loadModel(arenaPath + "arena")
         self.arena.setScale(2)
         self.arena.reparentTo(render)

@@ -19,9 +19,9 @@ from direct.particles.ParticleEffect import ParticleEffect
 
 class Player(FSM, DirectObject):
     def __init__(self, charId, charNr, controls):
-        FSM.__init__(self, "FSM-Player%d"%charNr)
+        FSM.__init__(self, "FSM-Player{}".format(charNr))
         self.charId = charId
-        charPath = "characters/character%d/" % charNr
+        charPath = "characters/character{}/".format(charNr)
         self.character = Actor(
             charPath + "char", {
                 "Idle":charPath + "idle",
@@ -41,28 +41,28 @@ class Player(FSM, DirectObject):
         self.walkSpeed = 2.0 # units per second
         if controls == "p1":
             self.character.setH(90)
-            self.leftButton = KeyboardButton.asciiKey('d')
-            self.rightButton = KeyboardButton.asciiKey('f')
-            self.punchLButton = KeyboardButton.asciiKey('q')
-            self.punchRButton = KeyboardButton.asciiKey('w')
-            self.kickLButton = KeyboardButton.asciiKey('a')
-            self.kickRButton = KeyboardButton.asciiKey('s')
-            self.defendButton = KeyboardButton.asciiKey('e')
+            self.leftButton = KeyboardButton.asciiKey("d")
+            self.rightButton = KeyboardButton.asciiKey("f")
+            self.punchLButton = KeyboardButton.asciiKey("q")
+            self.punchRButton = KeyboardButton.asciiKey("w")
+            self.kickLButton = KeyboardButton.asciiKey("a")
+            self.kickRButton = KeyboardButton.asciiKey("s")
+            self.defendButton = KeyboardButton.asciiKey("e")
         elif controls == "p2":
             self.character.setH(-90)
             self.leftButton = KeyboardButton.right()
             self.rightButton = KeyboardButton.left()
-            self.punchLButton = KeyboardButton.asciiKey('i')
-            self.punchRButton = KeyboardButton.asciiKey('o')
-            self.kickLButton = KeyboardButton.asciiKey('k')
-            self.kickRButton = KeyboardButton.asciiKey('l')
-            self.defendButton = KeyboardButton.asciiKey('p')
+            self.punchLButton = KeyboardButton.asciiKey("i")
+            self.punchRButton = KeyboardButton.asciiKey("o")
+            self.kickLButton = KeyboardButton.asciiKey("k")
+            self.kickRButton = KeyboardButton.asciiKey("l")
+            self.defendButton = KeyboardButton.asciiKey("p")
 
         self.getPos = self.character.getPos
         self.getX = self.character.getX
 
         characterSphere = CollisionSphere(0, 0, 1.0, 0.5)
-        self.collisionNodeName = "character%dCollision"%charId
+        self.collisionNodeName = "character{}Collision".format(charId)
         characterColNode = CollisionNode(self.collisionNodeName)
         characterColNode.addSolid(characterSphere)
         self.characterCollision = self.character.attachNewNode(characterColNode)
@@ -84,15 +84,15 @@ class Player(FSM, DirectObject):
 
     def setEnemy(self, enemyColName):
         self.enemyColName = enemyColName
-        inEvent = "%s-into-%s"%(enemyColName,self.collisionNodeName)
+        inEvent = "{}-into-{}".format(enemyColName,self.collisionNodeName)
         base.pusher.addInPattern(inEvent)
         self.accept(inEvent, self.setCanBeHit, [True])
-        outEvent = "%s-out-%s"%(enemyColName,self.collisionNodeName)
+        outEvent = "{}-out-{}".format(enemyColName,self.collisionNodeName)
         base.pusher.addOutPattern(outEvent)
         self.accept(outEvent, self.setCanBeHit, [False])
 
     def setCanBeHit(self, yes, collission):
-        eventName = "hitEnemy%s"%self.collisionNodeName
+        eventName = "hitEnemy{}".format(self.collisionNodeName)
         if yes:
             self.accept(eventName, self.gotHit)
         else:
@@ -141,10 +141,10 @@ class Player(FSM, DirectObject):
         self.isDefending = False
         self.gotDefeated = False
         self.health = 100
-        taskMgr.add(self.moveTask, "move task %d"%self.charId)
+        taskMgr.add(self.moveTask, "move task {}".format(self.charId))
 
     def stop(self):
-        taskMgr.remove("move task %d"%self.charId)
+        taskMgr.remove("move task {}".format(self.charId))
         self.ignoreAll()
         base.audio3d.detachSound(self.audioStep)
         base.audio3d.detachSound(self.audioHit)
@@ -181,7 +181,7 @@ class Player(FSM, DirectObject):
             isAction = True
             self.request("Kick_r")
         if isAction:
-            base.messenger.send("hitEnemy%s"%self.enemyColName)
+            base.messenger.send("hitEnemy{}".format(self.enemyColName))
             return task.cont
 
         if isDown(self.leftButton):

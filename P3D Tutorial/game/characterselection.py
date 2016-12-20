@@ -150,12 +150,12 @@ class CharacterSelection:
 
     def selectCharacter(self, charNr):
         if self.char1Frame["image"] == None:
-            self.char1Frame["image"] = "assets/gui/Char%d_L.png" % charNr
+            self.char1Frame["image"] = "assets/gui/Char{}_L.png".format(charNr)
             self.char1Frame["image_scale"] = (0.5,1, 1)
             self.selectedCharacter1 = charNr
             self.footerFrame["text"] = "PLAYER 2 - CHOOSE YOUR CHARACTER"
         elif self.char2Frame["image"] == None:
-            self.char2Frame["image"] = "assets/gui/Char%d_R.png" % charNr
+            self.char2Frame["image"] = "assets/gui/Char{}_R.png".format(charNr)
             self.char2Frame["image_scale"] = (0.5,1, 1)
             self.selectedCharacter2 = charNr
             self.btnStart["state"] = DGG.NORMAL

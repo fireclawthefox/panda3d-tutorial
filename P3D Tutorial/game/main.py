@@ -47,7 +47,7 @@ from helper import hide_cursor, show_cursor
 # set the application Name
 __builtin__.companyName = "Grimfang Studios"
 __builtin__.appName = "Tatakai no ikimono"
-__builtin__.versionstring = "15.12"
+__builtin__.versionstring = "16.12"
 home = os.path.expanduser("~")
 __builtin__.basedir = os.path.join(
     home,
@@ -55,12 +55,12 @@ __builtin__.basedir = os.path.join(
     __builtin__.appName)
 if not os.path.exists(__builtin__.basedir):
     os.makedirs(__builtin__.basedir)
-prcFile = os.path.join(__builtin__.basedir, "%s.prc"%__builtin__.appName)
+prcFile = os.path.join(__builtin__.basedir, "{}.prc".format(__builtin__.appName))
 if os.path.exists(prcFile):
     mainConfig = loadPrcFile(Filename.fromOsSpecific(prcFile))
 loadPrcFileData("",
 """
-    window-title %s
+    window-title {}
     cursor-hidden 0
     notify-timestamp 1
     #show-frame-rate-meter 1
@@ -69,7 +69,7 @@ loadPrcFileData("",
     multisamples 8
     texture-anisotropic-degree 0
     textures-auto-power-2 1
-"""%__builtin__.appName)
+""".format(__builtin__.appName))
 #
 # PATHS AND CONFIGS END
 #
@@ -86,7 +86,7 @@ logging.basicConfig(
     filemode="w")
 
 # First log entry, the program version
-logging.info("Version %s" % __builtin__.versionstring)
+logging.info("Version {}".format(__builtin__.versionstring))
 
 # redirect the notify output to a log file
 nout = MultiplexStream()
@@ -361,6 +361,8 @@ class Main(ShowBase, FSM):
         create one. The prc file is set in the prcFile variable"""
         page = None
 
+        # These TODO tags are as a reminder for to add any new config
+        # variables that may occur in the future
         #TODO: get values of configurations here
         particles = "#f" if not base.particleMgrEnabled else "#t"
         volume = str(round(base.musicManager.getVolume(), 2))
@@ -392,14 +394,14 @@ class Main(ShowBase, FSM):
         else:
             # Create a config file and set default values
             cpMgr = ConfigPageManager.getGlobalPtr()
-            page = cpMgr.makeExplicitPage("%s Pandaconfig"%appName)
+            page = cpMgr.makeExplicitPage("{} Pandaconfig".format(appName))
             # set OpenGL to be the default
             page.makeDeclaration("load-display", "pandagl")
             # get the displays width and height
             w = self.pipe.getDisplayWidth()
             h = self.pipe.getDisplayHeight()
             # set the window size in the config file
-            page.makeDeclaration("win-size", "%d %d"%(w, h))
+            page.makeDeclaration("win-size", "{} {}".format(w, h))
             # set the default to fullscreen in the config file
             page.makeDeclaration("fullscreen", "1")
             # particles

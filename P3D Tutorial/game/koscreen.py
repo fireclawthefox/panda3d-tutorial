@@ -63,7 +63,7 @@ class KoScreen(DirectObject):
 
     def show(self, succseedingPlayer):
         self.frameMain.show()
-        self.lbl_PlayerXWon["text"] = "PLAYER %d WON" % succseedingPlayer
+        self.lbl_PlayerXWon["text"] = "PLAYER {} WON".format(succseedingPlayer)
 
     def hide(self):
         self.frameMain.hide()
