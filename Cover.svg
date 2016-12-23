@@ -15,11 +15,11 @@
    height="1052.3622"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="Cover.svg"
-   inkscape:export-filename="/home/linux/Dokumente/Privat/Projects/Git_projects/panda3d-tutorial/Cover.png"
-   inkscape:export-xdpi="300.01077"
-   inkscape:export-ydpi="300.01077">
+   inkscape:export-filename="/home/fireclaw/Workspace/panda3d-tutorial/Cover_tiny.png"
+   inkscape:export-xdpi="11.973064"
+   inkscape:export-ydpi="11.973064">
   <title
      id="title3053">Panda3D Geme Dev Tutorial Cover</title>
   <defs
@@ -266,7 +266,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.5"
-     inkscape:cx="494.38293"
+     inkscape:cx="110.38293"
      inkscape:cy="496.01788"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -277,9 +277,9 @@
      inkscape:snap-object-midpoints="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1366"
-     inkscape:window-height="744"
-     inkscape:window-x="0"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
+     inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:snap-midpoints="false"
@@ -295,7 +295,7 @@
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
         <dc:title>Panda3D Geme Dev Tutorial Cover</dc:title>
         <cc:license
-           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" />
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
         <dc:creator>
           <cc:Agent>
             <dc:title>Fireclaw the Fox</dc:title>
