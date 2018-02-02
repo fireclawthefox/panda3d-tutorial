@@ -41,22 +41,22 @@ class Player(FSM, DirectObject):
         self.walkSpeed = 2.0 # units per second
         if controls == "p1":
             self.character.setH(90)
-            self.leftButton = KeyboardButton.asciiKey("d")
-            self.rightButton = KeyboardButton.asciiKey("f")
-            self.punchLButton = KeyboardButton.asciiKey("q")
-            self.punchRButton = KeyboardButton.asciiKey("w")
-            self.kickLButton = KeyboardButton.asciiKey("a")
-            self.kickRButton = KeyboardButton.asciiKey("s")
-            self.defendButton = KeyboardButton.asciiKey("e")
+            self.leftButton = KeyboardButton.asciiKey(b"d")
+            self.rightButton = KeyboardButton.asciiKey(b"f")
+            self.punchLButton = KeyboardButton.asciiKey(b"q")
+            self.punchRButton = KeyboardButton.asciiKey(b"w")
+            self.kickLButton = KeyboardButton.asciiKey(b"a")
+            self.kickRButton = KeyboardButton.asciiKey(b"s")
+            self.defendButton = KeyboardButton.asciiKey(b"e")
         elif controls == "p2":
             self.character.setH(-90)
             self.leftButton = KeyboardButton.right()
             self.rightButton = KeyboardButton.left()
-            self.punchLButton = KeyboardButton.asciiKey("i")
-            self.punchRButton = KeyboardButton.asciiKey("o")
-            self.kickLButton = KeyboardButton.asciiKey("k")
-            self.kickRButton = KeyboardButton.asciiKey("l")
-            self.defendButton = KeyboardButton.asciiKey("p")
+            self.punchLButton = KeyboardButton.asciiKey(b"i")
+            self.punchRButton = KeyboardButton.asciiKey(b"o")
+            self.kickLButton = KeyboardButton.asciiKey(b"k")
+            self.kickRButton = KeyboardButton.asciiKey(b"l")
+            self.defendButton = KeyboardButton.asciiKey(b"p")
 
         self.getPos = self.character.getPos
         self.getX = self.character.getX
