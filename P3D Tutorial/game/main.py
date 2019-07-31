@@ -7,26 +7,25 @@ See License.txt or http://opensource.org/licenses/BSD-2-Clause for more info
 
 # Python imports
 import os
-import logging
 
 # Panda3D imoprts
 from direct.showbase.ShowBase import ShowBase
 from direct.fsm.FSM import FSM
+from direct.gui.DirectGui import DGG
 from panda3d.core import (
     CollisionTraverser,
     CollisionHandlerPusher,
     AntialiasAttrib,
     ConfigPageManager,
+    ConfigVariableInt,
     ConfigVariableBool,
+    ConfigVariableString,
     OFileStream,
     WindowProperties,
     loadPrcFileData,
     loadPrcFile,
-    MultiplexStream,
-    Notify,
     Filename,
     AudioSound)
-from direct.gui.DirectGui import DGG
 from direct.showbase.Audio3DManager import Audio3DManager
 
 # Game imports
@@ -43,10 +42,12 @@ from helper import hide_cursor, show_cursor
 #
 # PATHS AND CONFIGS
 #
-# set the application Name
+# set company and application details
 companyName = "Grimfang Studio"
 appName = "Tatakai no ikimono"
-versionstring = "16.12"
+versionstring = "19.07"
+
+# build the path from the details we have
 home = os.path.expanduser("~")
 basedir = os.path.join(
     home,
@@ -54,47 +55,36 @@ basedir = os.path.join(
     appName)
 if not os.path.exists(basedir):
     os.makedirs(basedir)
+
+# look for a config file
 prcFile = os.path.join(basedir, "{}.prc".format(appName))
 if os.path.exists(prcFile):
     mainConfig = loadPrcFile(Filename.fromOsSpecific(prcFile))
+
+# set configurations that should not be changed from a config file
 loadPrcFileData("",
 """
-    window-title {}
-    cursor-hidden 0
-    notify-timestamp 1
-    #show-frame-rate-meter 1
+    #
+    # Model loading
+    #
     model-path $MAIN_DIR/assets/
-    framebuffer-multisample 1
-    multisamples 8
-    texture-anisotropic-degree 0
-    textures-auto-power-2 1
+
+    #
+    # Window and graphics
+    #
+    window-title {}
+    #show-frame-rate-meter 1
+
+    #
+    # Logging
+    #
+    #notify-level info
+    notify-timestamp 1
 """.format(appName))
-#
-# PATHS AND CONFIGS END
-#
 
 #
-# LOGGING
+# MAIN GAME CLASS
 #
-# setup Logging
-logging.basicConfig(
-    level=logging.DEBUG,
-    format="%(asctime)s %(levelname)s: %(message)s",
-    filename=os.path.join(basedir, "game.log"),
-    datefmt="%d-%m-%Y %H:%M:%S",
-    filemode="w")
-
-# First log entry, the program version
-logging.info("Version {}".format(versionstring))
-
-# redirect the notify output to a log file
-nout = MultiplexStream()
-Notify.ptr().setOstreamPtr(nout, 0)
-nout.addFile(Filename(os.path.join(basedir, "game_p3d.log")))
-#
-# LOGGING END
-#
-
 class Main(ShowBase, FSM):
     """Main function of the application
     initialise the engine (ShowBase)"""
@@ -102,6 +92,7 @@ class Main(ShowBase, FSM):
     def __init__(self):
         """initialise the engine"""
         ShowBase.__init__(self)
+        base.notify.info("Version {}".format(versionstring))
         FSM.__init__(self, "FSM-Game")
 
         #
@@ -109,34 +100,30 @@ class Main(ShowBase, FSM):
         #
         # disable pandas default camera driver
         self.disableMouse()
-        # set background color to black
-        self.setBackgroundColor(0, 0, 0)
         # set antialias for the complete sceen to automatic
         self.render.setAntialias(AntialiasAttrib.MAuto)
         # shader generator
         render.setShaderAuto()
         # Enhance font readability
         DGG.getDefaultFont().setPixelsPerUnit(100)
+        # get the displays width and height for later usage
+        self.dispWidth = self.pipe.getDisplayWidth()
+        self.dispHeight = self.pipe.getDisplayHeight()
 
         #
         # CONFIGURATION LOADING
         #
         # load given variables or set defaults
-        # check if audio should be muted
-        mute = ConfigVariableBool("audio-mute", False).getValue()
-        if mute:
-            self.disableAllAudio()
-        else:
-            self.enableAllAudio()
         # check if particles should be enabled
+        # NOTE: If you use the internal physics engine, this always has
+        #       to be enabled!
         particles = ConfigVariableBool("particles-enabled", True).getValue()
         if particles:
             self.enableParticles()
-        # check if the config file hasn't been created
-        if not os.path.exists(prcFile):
-            # get the displays width and height
-            w = self.pipe.getDisplayWidth()
-            h = self.pipe.getDisplayHeight()
+
+        def setFullscreen():
+            """Helper function to set the window fullscreen
+            with width and height set to the screens size"""
             # set window properties
             # clear all properties not previously set
             base.win.clearRejectedProperties()
@@ -145,53 +132,32 @@ class Main(ShowBase, FSM):
             # Fullscreen
             props.setFullscreen(True)
             # set the window size to the screen resolution
-            props.setSize(w, h)
+            props.setSize(self.dispWidth, self.dispHeight)
             # request the new properties
             base.win.requestProperties(props)
-        elif base.appRunner:
-            # As when the application is started as appRunner instance
-            # it doesn't respect our loadPrcFile configurations specific
-            # to the window, hence we need to manually set them here.
-            for dec in range(mainConfig.getNumDeclarations()):
-                #TODO: Check for all window specific variables like
-                #      fullscreen, screen size, title and window
-                #      decoration that you have in your configuration
-                #      and set them by your own.
-                if mainConfig.getVariableName(dec) == "fullscreen":
-                    if not mainConfig.getDeclaration(dec).getBoolWord(0): break
-                    # get the displays width and height
-                    w = self.pipe.getDisplayWidth()
-                    h = self.pipe.getDisplayHeight()
-                    # set window properties
-                    # clear all properties not previously set
-                    base.win.clearRejectedProperties()
-                    # setup new window properties
-                    props = WindowProperties()
-                    # Fullscreen
-                    props.setFullscreen(True)
-                    # set the window size to the screen resolution
-                    props.setSize(w, h)
-                    # request the new properties
-                    base.win.requestProperties(props)
-                    break
+            # Set the config variables so we correctly store the
+            # new size and fullscreen setting later
+            winSize = ConfigVariableString("win-size")
+            winSize.setValue("{} {}".format(self.dispWidth, self.dispHeight))
+            fullscreen = ConfigVariableBool("fullscreen")
+            fullscreen.setValue(True)
+            # Render a frame to make sure the fullscreen is applied
+            # before we do anything else
+            self.taskMgr.step()
+            # make sure to propagate the new aspect ratio properly so
+            # the GUI and other things will be scaled appropriately
+            aspectRatio = self.dispWidth / self.dispHeight
+            self.adjustWindowAspectRatio(aspectRatio)
 
+
+        # check if the config file hasn't been created
+        if not os.path.exists(prcFile):
+            setFullscreen()
         # automatically safe configuration at application exit
-        base.exitFunc = self.__writeConfig
+        #base.exitFunc = self.__writeConfig
 
-        # due to the delayed window resizing and switch to fullscreen
-        # we wait some time until everything is set so we can savely
-        # proceed with other setups like the menus
-        if base.appRunner:
-            # this behaviour only happens if run from p3d files and
-            # hence the appRunner is enabled
-            taskMgr.doMethodLater(0.5, self.postInit,
-                "post initialization", extraArgs=[])
-        else:
-            self.postInit()
-
-    def postInit(self):
         #
-        # initialize game content
+        # INITIALIZE GAME CONTENT
         #
         base.cTrav = CollisionTraverser("base collision traverser")
         base.pusher = CollisionHandlerPusher()
@@ -208,12 +174,13 @@ class Main(ShowBase, FSM):
         base.audio3d = Audio3DManager(base.sfxManagerList[0], camera)
 
         #
-        # Event handling
+        # EVENT HANDLING
         #
+        # By default we accept the escape key
         self.accept("escape", self.__escape)
 
         #
-        # Start with the menu
+        # ENTER GAMES INITIAL FSM STATE
         #
         self.request("Menu")
 
@@ -224,7 +191,7 @@ class Main(ShowBase, FSM):
         show_cursor()
         self.accept("Menu-Start", self.request, ["CharSelection"])
         self.accept("Menu-Credits", self.request, ["Credits"])
-        self.accept("Menu-Quit", self.quit)
+        self.accept("Menu-Quit", self.userExit)
         self.ignore("KoScreen-Back")
         self.koScreen.hide()
         self.menu.show()
@@ -344,31 +311,48 @@ class Main(ShowBase, FSM):
         return task.cont
 
     def __escape(self):
+        """Handle user escape key klicks"""
         if self.state == "Menu":
-            self.quit()
+            # In this state, we will stop the application
+            self.userExit()
         elif self.state == "LevelSelection":
             self.request("CharSelection")
         else:
+            # In every other state, we switch back to the Menu state
             self.request("Menu")
-
-    def quit(self):
-        """This function will stop the application"""
-        self.userExit()
 
     def __writeConfig(self):
         """Save current config in the prc file or if no prc file exists
         create one. The prc file is set in the prcFile variable"""
         page = None
 
-        # These TODO tags are as a reminder for to add any new config
-        # variables that may occur in the future
-        #TODO: get values of configurations here
-        particles = "#f" if not base.particleMgrEnabled else "#t"
-        volume = str(round(base.musicManager.getVolume(), 2))
-        mute = "#f" if base.AppHasAudioFocus else "#t"
-        #TODO: add any configuration variable name that you have added
-        customConfigVariables = [
-            "", "particles-enabled", "audio-mute", "audio-volume"]
+        #
+        #TODO: add any configuration variable names that you have added
+        #      to the dictionaries in the next lines. Set the current
+        #      configurations value as value in this dictionary and it's
+        #      name as key.
+        configVariables = {
+            # set the window size in the config file
+            "win-size": ConfigVariableString("win-size", "{} {}".format(self.dispWidth, self.dispHeight)).getValue(),
+            # set the default to fullscreen in the config file
+            "fullscreen": "#t" if ConfigVariableBool("fullscreen", True).getValue() else "#f",
+            # particles
+            "particles-enabled": "#t" if self.particleMgrEnabled else "#f",
+            # audio
+            "audio-volume": str(round(self.musicManager.getVolume(), 2)),
+            "audio-music-active": "#t" if ConfigVariableBool("audio-music-active").getValue() else "#f",
+            "audio-sfx-active": "#t" if ConfigVariableBool("audio-sfx-active").getValue() else "#f",
+            # logging
+            "notify-output": os.path.join(basedir, "game.log"),
+            # window
+            "framebuffer-multisample": "#t" if ConfigVariableBool("framebuffer-multisample").getValue() else "#f",
+            "multisamples": str(ConfigVariableInt("multisamples", 8).getValue()),
+            "texture-anisotropic-degree": str(ConfigVariableInt("texture-anisotropic-degree").getValue()),
+            "textures-auto-power-2": "#t" if ConfigVariableBool("textures-auto-power-2", True).getValue() else "#f",
+            }
+
+        page = None
+        # Check if we have an existing configuration file
         if os.path.exists(prcFile):
             # open the config file and change values according to current
             # application settings
@@ -378,36 +362,18 @@ class Main(ShowBase, FSM):
                 # Check if our variables are given.
                 # NOTE: This check has to be done to not loose our base or other
                 #       manual config changes by the user
-                if page.getVariableName(dec) in customConfigVariables:
-                    decl = page.modifyDeclaration(dec)
-                    removeDecls.append(decl)
+                if page.getVariableName(dec) in configVariables.keys():
+                    removeDecls.append(page.modifyDeclaration(dec))
             for dec in removeDecls:
                 page.deleteDeclaration(dec)
-            # NOTE: particles-enabled and audio-mute are custom variables and
-            #       have to be loaded by hand at startup
-            # Particles
-            page.makeDeclaration("particles-enabled", particles)
-            # audio
-            page.makeDeclaration("audio-volume", volume)
-            page.makeDeclaration("audio-mute", mute)
         else:
             # Create a config file and set default values
             cpMgr = ConfigPageManager.getGlobalPtr()
-            page = cpMgr.makeExplicitPage("{} Pandaconfig".format(appName))
-            # set OpenGL to be the default
-            page.makeDeclaration("load-display", "pandagl")
-            # get the displays width and height
-            w = self.pipe.getDisplayWidth()
-            h = self.pipe.getDisplayHeight()
-            # set the window size in the config file
-            page.makeDeclaration("win-size", "{} {}".format(w, h))
-            # set the default to fullscreen in the config file
-            page.makeDeclaration("fullscreen", "1")
-            # particles
-            page.makeDeclaration("particles-enabled", "#t")
-            # audio
-            page.makeDeclaration("audio-volume", volume)
-            page.makeDeclaration("audio-mute", "#f")
+            page = cpMgr.makeExplicitPage("Application Config")
+
+        # always write custom configurations
+        for key, value in configVariables.items():
+            page.makeDeclaration(key, value)
         # create a stream to the specified config file
         configfile = OFileStream(prcFile)
         # and now write it out
@@ -420,5 +386,8 @@ class Main(ShowBase, FSM):
     #
 # CLASS Main END
 
+#
+# START GAME
+#
 Game = Main()
 Game.run()
